@@ -3,7 +3,7 @@
 #include "Service.h"
 #include <QMessageBox>
 
-Editservice::Editservice(const QString& service_ID, const QString& name, int price, const QString& des, QWidget *parent)
+Editservice::Editservice(const string& service_ID, const string& name, int price, const string& des, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Editservice)
     , service_ID(service_ID)
@@ -12,9 +12,9 @@ Editservice::Editservice(const QString& service_ID, const QString& name, int pri
     , description(des)
 {
     ui->setupUi(this);
-    ui->name->setPlaceholderText(name);
+    ui->name->setPlaceholderText(QString::fromStdString(name));
     ui->price->setPlaceholderText(QString::number(price));
-    ui->des->setPlaceholderText(des);
+    ui->des->setPlaceholderText(QString::fromStdString(des));
 }
 
 Editservice::~Editservice()
@@ -25,9 +25,9 @@ Editservice::~Editservice()
 void Editservice::on_UpdateSerbtn_clicked()
 {
     bool c;
-    QString newname = ui->name->text();
+    string newname = ui->name->text().toStdString();
     int newprice = ui->price->text().toInt(&c);
-    QString newdes = ui->des->text();
+    string newdes = ui->des->text().toStdString();
     if (ui->name->text().isEmpty()){
         newname = name;
     }

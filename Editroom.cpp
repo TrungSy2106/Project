@@ -2,7 +2,7 @@
 #include "ui_Editroom.h"
 #include "Room.h"
 
-Editroom::Editroom(const QString& roomID, QWidget *parent)
+Editroom::Editroom(const string& roomID, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Editroom)
     , room_ID(roomID)
@@ -18,11 +18,11 @@ Editroom::~Editroom()
 void Editroom::on_Updateroombtn_clicked()
 {
     int newst;
-    QString st = ui->comboBox->currentText();
+    string st = ui->comboBox->currentText().toStdString();
     if (st == "Trống") newst = 0;
     else newst = 2;
-    QString newrt = ui->newRT->text();
-    QString rt = this->room_ID;
+    string newrt = ui->newRT->text().toStdString();
+    string rt = this->room_ID;
     Room::updateRoom(rt, newst, newrt);
 }
 

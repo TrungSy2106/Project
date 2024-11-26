@@ -1,7 +1,7 @@
 #ifndef SERVICE_H
 #define SERVICE_H
 
-#include <QString>
+#include <string>
 #include <sstream>
 #include "LinkedList.h"
 #include "admin.h"
@@ -10,10 +10,10 @@ class Admin;
 
 class Service
 {
-    QString service_ID;
-    QString name;
+    string service_ID;
+    string name;
     int unit_price;
-    QString description;
+    string description;
 
 public:
     friend class Admin;
@@ -22,25 +22,25 @@ public:
     static LinkedList<Service> serviceList;
 
     Service();
-    Service(const QString& n, int price, const QString& desc);
+    Service(const string& n, int price, const string& desc);
     ~Service();
 
-    void fromString(const QString& line);
-    QString getID() const;
-    QString getName() const;
+    void fromString(const string& line);
+    string getID() const;
+    string getName() const;
 
-    static QString generateID(int number);
-    QString toString() const;
+    static string generateID(int number);
+    string toString() const;
     void display(Admin* adminWindow) const;
 
-    static void load(const QString& filename);
-    static void updateFile(const QString& filename);
-    static void addService(const QString& name, int price, const QString& des);
-    static void updateService(const QString& id, const QString& name, int price, const QString& des);
-    static void deleteService(const QString& id);
+    static void load(const string& filename);
+    static void updateFile(const string& filename);
+    static void addService(const string& name, int price, const string& des);
+    static void updateService(const string& id, const string& name, int price, const string& des);
+    static void deleteService(const string& id);
     static void showAllServices(Admin* adminWindow);
-    static void searchByID(const QString& id, Admin* adminWindow);
-    static void searchByName(const QString& name, Admin* adminWindow);
+    static bool searchByID(const string& id, Admin* adminWindow);
+    static void searchByName(const string& name, Admin* adminWindow);
 };
 
 #endif // SERVICE_H

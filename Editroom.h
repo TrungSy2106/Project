@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+using namespace  std;
+
 namespace Ui {
 class Editroom;
 }
@@ -12,8 +14,8 @@ class Editroom : public QDialog
     Q_OBJECT
 
 public:
-    // void setRI(const QString &roomID);
-    explicit Editroom(const QString& roomID, QWidget *parent = nullptr);
+    // void setRI(const string &roomID);
+    explicit Editroom(const string& roomID, QWidget *parent = nullptr);
     ~Editroom();
 
 private slots:
@@ -21,7 +23,7 @@ private slots:
 
 private:
     Ui::Editroom *ui;
-    QString room_ID;
+    string room_ID;
 };
 
 #endif // EDITROOM_H

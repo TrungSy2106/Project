@@ -17,10 +17,10 @@ AddService::~AddService()
 
 void AddService::on_AddSerbtn_clicked()
 {
-    QString name = ui->newname->text();
+    string name = ui->newname->text().toStdString();
     bool c;
     int price = ui->newprice->text().toInt(&c);
-    QString des = ui->newdes->text();
+    string des = ui->newdes->text().toStdString();
     if(!c){
         QMessageBox::warning(this, "Lỗi", "Giá dịch vụ không hợp lệ. Vui lòng nhập lại!");
         return;

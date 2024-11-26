@@ -1,6 +1,6 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
-#include <Qstring>
+#include <string>
 #include <QFile>
 #include "admin.h"
 using namespace std;
@@ -24,15 +24,15 @@ public:
     ~LinkedList();
     int size() const;
 
-    void load(const QString& filename);
-    void updateFile(const QString& filename) const;
+    void load(const string& filename);
+    void updateFile(const string& filename) const;
     void add(const T& data);
-    Node* deleteNode(const QString& value);
+    Node* deleteNode(const string& value);
     // void edit(const string& ID);
     Node* getHead();
-    T* searchID(const QString& ID) const;
+    T* searchID(const string& ID) const;
     void searchStatus(const int& status, Admin* adminWindow);
-    void searchRoomType(const QString& RT, Admin* adminWindow);
+    void searchRoomType(const string& RT, Admin* adminWindow);
     // void searchAll(LinkedList<T>& list);
     void show(Admin* adminWindow) const;
     void sortByID(bool ascending = true);

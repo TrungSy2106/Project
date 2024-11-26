@@ -7,59 +7,57 @@ int Service::currentNumber = 0;
 LinkedList<Service> Service::serviceList;
 
 Service::Service() {}
-Service::Service(const QString& n, int price, const QString& desc)
+Service::Service(const string& n, int price, const string& desc)
     : name(n), unit_price(price), description(desc) {
     currentNumber++;
     service_ID = generateID(currentNumber);
 }
 Service::~Service() {}
 
-QString Service::getID() const { return service_ID; }
-QString Service::getName() const { return name; }
+string Service::getID() const { return service_ID; }
+string Service::getName() const { return name; }
 
-QString Service::generateID(int number) {
+string Service::generateID(int number) {
     stringstream ss;
     ss << "S." << setw(3) << setfill('0') << number;
-    return QString::fromStdString(ss.str());
+    return ss.str();
 }
 
-void Service::fromString(const QString& line) {
-    stringstream ss(line.toStdString());
-    string s_id, s_name, des;
-    getline(ss, s_id, ',');
-    service_ID = QString::fromStdString(s_id);
-    getline(ss, s_name, ',');
-    name = QString::fromStdString(s_name);
+void Service::fromString(const string& line) {
+    stringstream ss(line);
+    getline(ss, service_ID, ',');
+    getline(ss, name, ',');
     ss >> unit_price;
     ss.ignore(1);
-    getline(ss, des);
-    description = QString::fromStdString(des);
+    getline(ss, description);
     total++;
 }
 
-QString Service::toString() const {
-    return service_ID + "," + name + "," + QString::number(unit_price) + "," + description;
+string Service::toString() const {
+    stringstream ss;
+    ss << service_ID << "," << name << "," << unit_price << "," << description;
+    return ss.str();
 }
 
-void Service::load(const QString& filename) { serviceList.load(filename); }
-void Service::updateFile(const QString& filename) { serviceList.updateFile(filename); }
+void Service::load(const string& filename) { serviceList.load(filename); }
+void Service::updateFile(const string& filename) { serviceList.updateFile(filename); }
 
 void Service::display(Admin* adminWindow) const {
-    adminWindow->displayService(*this);
+    adminWindow->displayServices(*this);
 }
 
 void Service::showAllServices(Admin* adminWindow) {
     serviceList.show(adminWindow);
 }
 
-void Service::addService(const QString& name, int price, const QString& des) {
+void Service::addService(const string& name, int price, const string& des) {
     Service service(name, price, des);
     serviceList.add(service);
     total++;
     Service::updateFile("Service.txt");
 }
 
-void Service::updateService(const QString& id, const QString& name, int price, const QString& des) {
+void Service::updateService(const string& id, const string& name, int price, const string& des) {
     Service* service = serviceList.searchID(id);
     if (service) {
         service->name = name;
@@ -69,24 +67,38 @@ void Service::updateService(const QString& id, const QString& name, int price, c
     }
 }
 
-void Service::deleteService(const QString& id) {
+void Service::deleteService(const string& id) {
     serviceList.deleteNode(id);
     total--;
     Service::updateFile("Service.txt");
 }
 
-void Service::searchByID(const QString& id, Admin* adminWindow) {
-    Service* service = serviceList.searchID(id);
-    if (service)
-        adminWindow->displayService(*service);
-    else return;
+// void Service::searchByID(const string& id, Admin* adminWindow) {
+//     Service* service = serviceList.searchID(id);
+//     if (service)
+//         adminWindow->displayService(*service);
+//     else return;
+// }
+
+bool Service::searchByID(const string& id, Admin* adminWindow) {
+    bool found = false;
+    LinkedList<Service>::Node* current = serviceList.begin();
+    while (current != nullptr) {
+        string ID = current->data.getID();
+        if ( ID.find(id) != string::npos) {
+            current->data.display(adminWindow);
+            found = true;
+        }
+        current = current->next;
+    }
+    return found;
 }
 
-void Service::searchByName(const QString& name, Admin* adminWindow) {
+void Service::searchByName(const string& name, Admin* adminWindow) {
     bool found = false;
-    LinkedList<Service>::Node* current = serviceList.getHead();
+    LinkedList<Service>::Node* current = serviceList.begin();
     while (current != nullptr) {
-        if (current->data.getName() == name) {
+        if (current->data.getName().find(name) != string::npos) {
             current->data.display(adminWindow);
             found = true;
         }

@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'login.ui'
+** Form generated from reading UI file 'Login.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.8.0
 **
@@ -11,124 +11,151 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_login
+class Ui_Login
 {
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
-    QGroupBox *groupBox;
-    QPushButton *btncancel;
-    QPushButton *btnlogin;
-    QLabel *label_2;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QPushButton *Signinbtn;
+    QPushButton *Signupbtn;
     QLabel *label;
-    QLineEdit *LEUser;
-    QLineEdit *LEPass;
-    QLabel *label_3;
-    QPushButton *pushButton;
+    QWidget *SignInpage;
+    QLabel *label_2;
+    QPushButton *SigninBackButton;
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout_2;
+    QLineEdit *UserName;
+    QLineEdit *Password;
+    QPushButton *Loginbtn;
 
-    void setupUi(QMainWindow *login)
+    void setupUi(QMainWindow *Login)
     {
-        if (login->objectName().isEmpty())
-            login->setObjectName("login");
-        login->resize(363, 220);
-        centralwidget = new QWidget(login);
+        if (Login->objectName().isEmpty())
+            Login->setObjectName("Login");
+        Login->resize(428, 455);
+        Login->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        centralwidget = new QWidget(Login);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
-        groupBox = new QGroupBox(centralwidget);
-        groupBox->setObjectName("groupBox");
+        stackedWidget = new QStackedWidget(centralwidget);
+        stackedWidget->setObjectName("stackedWidget");
+        page = new QWidget();
+        page->setObjectName("page");
+        Signinbtn = new QPushButton(page);
+        Signinbtn->setObjectName("Signinbtn");
+        Signinbtn->setGeometry(QRect(70, 210, 251, 51));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Times New Roman")});
-        font.setPointSize(15);
-        font.setBold(true);
-        groupBox->setFont(font);
-        groupBox->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        btncancel = new QPushButton(groupBox);
-        btncancel->setObjectName("btncancel");
-        btncancel->setGeometry(QRect(180, 110, 91, 31));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Times New Roman")});
-        font1.setPointSize(16);
-        font1.setBold(true);
-        btncancel->setFont(font1);
-        btnlogin = new QPushButton(groupBox);
-        btnlogin->setObjectName("btnlogin");
-        btnlogin->setGeometry(QRect(70, 110, 91, 31));
-        btnlogin->setFont(font1);
-        label_2 = new QLabel(groupBox);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(10, 80, 111, 21));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Times New Roman")});
-        font2.setPointSize(16);
-        font2.setBold(false);
-        label_2->setFont(font2);
-        label = new QLabel(groupBox);
+        font.setPointSize(16);
+        font.setBold(false);
+        Signinbtn->setFont(font);
+        Signinbtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        Signupbtn = new QPushButton(page);
+        Signupbtn->setObjectName("Signupbtn");
+        Signupbtn->setGeometry(QRect(70, 280, 251, 51));
+        Signupbtn->setFont(font);
+        Signupbtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        label = new QLabel(page);
         label->setObjectName("label");
-        label->setGeometry(QRect(10, 40, 111, 21));
-        label->setFont(font2);
-        LEUser = new QLineEdit(groupBox);
-        LEUser->setObjectName("LEUser");
-        LEUser->setGeometry(QRect(130, 30, 191, 31));
-        LEUser->setFont(font1);
-        LEUser->setEchoMode(QLineEdit::EchoMode::Normal);
-        LEPass = new QLineEdit(groupBox);
-        LEPass->setObjectName("LEPass");
-        LEPass->setGeometry(QRect(130, 70, 191, 31));
-        LEPass->setFont(font1);
-        LEPass->setEchoMode(QLineEdit::EchoMode::Password);
-        label_3 = new QLabel(groupBox);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(70, 160, 151, 16));
+        label->setGeometry(QRect(80, 60, 241, 91));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Stencil")});
+        font1.setPointSize(40);
+        label->setFont(font1);
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        stackedWidget->addWidget(page);
+        SignInpage = new QWidget();
+        SignInpage->setObjectName("SignInpage");
+        label_2 = new QLabel(SignInpage);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(110, 60, 191, 91));
+        QFont font2;
+        font2.setPointSize(40);
+        label_2->setFont(font2);
+        label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        SigninBackButton = new QPushButton(SignInpage);
+        SigninBackButton->setObjectName("SigninBackButton");
+        SigninBackButton->setGeometry(QRect(10, 10, 81, 31));
         QFont font3;
-        font3.setFamilies({QString::fromUtf8("Times New Roman")});
         font3.setPointSize(11);
         font3.setBold(false);
-        label_3->setFont(font3);
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(220, 160, 61, 21));
+        SigninBackButton->setFont(font3);
+        layoutWidget = new QWidget(SignInpage);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(70, 210, 283, 165));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget);
+        verticalLayout_2->setSpacing(20);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        UserName = new QLineEdit(layoutWidget);
+        UserName->setObjectName("UserName");
+        UserName->setMinimumSize(QSize(281, 41));
         QFont font4;
-        font4.setFamilies({QString::fromUtf8("Times New Roman")});
-        font4.setPointSize(10);
-        font4.setBold(true);
-        pushButton->setFont(font4);
+        font4.setPointSize(11);
+        UserName->setFont(font4);
 
-        verticalLayout->addWidget(groupBox);
+        verticalLayout_2->addWidget(UserName);
 
-        login->setCentralWidget(centralwidget);
+        Password = new QLineEdit(layoutWidget);
+        Password->setObjectName("Password");
+        Password->setMinimumSize(QSize(281, 41));
+        Password->setFont(font4);
+        Password->setEchoMode(QLineEdit::EchoMode::Password);
 
-        retranslateUi(login);
+        verticalLayout_2->addWidget(Password);
 
-        QMetaObject::connectSlotsByName(login);
+        Loginbtn = new QPushButton(layoutWidget);
+        Loginbtn->setObjectName("Loginbtn");
+        Loginbtn->setMinimumSize(QSize(281, 41));
+        Loginbtn->setFont(font3);
+        Loginbtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+
+        verticalLayout_2->addWidget(Loginbtn);
+
+        stackedWidget->addWidget(SignInpage);
+
+        verticalLayout->addWidget(stackedWidget);
+
+        Login->setCentralWidget(centralwidget);
+
+        retranslateUi(Login);
+
+        stackedWidget->setCurrentIndex(1);
+
+
+        QMetaObject::connectSlotsByName(Login);
     } // setupUi
 
-    void retranslateUi(QMainWindow *login)
+    void retranslateUi(QMainWindow *Login)
     {
-        login->setWindowTitle(QCoreApplication::translate("login", "MainWindow", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("login", "Wellcome", nullptr));
-        btncancel->setText(QCoreApplication::translate("login", "Cancel", nullptr));
-        btnlogin->setText(QCoreApplication::translate("login", "Login", nullptr));
-        label_2->setText(QCoreApplication::translate("login", "Password:", nullptr));
-        label->setText(QCoreApplication::translate("login", "Username:", nullptr));
-        label_3->setText(QCoreApplication::translate("login", "Don't have an account?", nullptr));
-        pushButton->setText(QCoreApplication::translate("login", "Register", nullptr));
+        Login->setWindowTitle(QCoreApplication::translate("Login", "MainWindow", nullptr));
+        Signinbtn->setText(QCoreApplication::translate("Login", "Sign in", nullptr));
+        Signupbtn->setText(QCoreApplication::translate("Login", "Sign up", nullptr));
+        label->setText(QCoreApplication::translate("Login", "Welcome", nullptr));
+        label_2->setText(QCoreApplication::translate("Login", "Sign In", nullptr));
+        SigninBackButton->setText(QCoreApplication::translate("Login", "< Back", nullptr));
+        UserName->setPlaceholderText(QCoreApplication::translate("Login", " Username ", nullptr));
+        Password->setText(QString());
+        Password->setPlaceholderText(QCoreApplication::translate("Login", " Password", nullptr));
+        Loginbtn->setText(QCoreApplication::translate("Login", "Log in", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class login: public Ui_login {};
+    class Login: public Ui_Login {};
 } // namespace Ui
 
 QT_END_NAMESPACE

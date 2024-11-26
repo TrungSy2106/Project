@@ -18,7 +18,7 @@ Addroom::~Addroom()
 
 void Addroom::on_Addroombtn_clicked()
 {
-    QString roomtype = ui->newRT->text();
+    string roomtype = ui->newRT->text().toStdString();
     if (!(roomtype == "RT.01" || roomtype == "RT.02" || roomtype == "RT.03" || roomtype == "RT.05"))
     {
         QMessageBox::warning(this, "Lỗi!", "Bạn đã nhập sai loại phòng. Vui lòng nhập lại!");

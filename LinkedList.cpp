@@ -1,6 +1,6 @@
 #include "LinkedList.h"
-#include <QFile>
-#include <QDebug>
+#include <string>
+#include <fstream>
 #include <iostream>
 using namespace std;
 template <typename T>
@@ -32,63 +32,52 @@ typename LinkedList<T>::Node* LinkedList<T>::getHead() {
 }
 
 template <typename T>
-void LinkedList<T>::load(const QString& filename) {
-    QFile file(filename);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Cannot open file" << filename;
+void LinkedList<T>::load(const string& filename) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Cannot open file " << filename << endl;
         return;
     }
-    QTextStream in(&file);
-    QString line;
-
-    in.readLine();  // Bỏ qua dòng đầu tiên
-    if (in.readLineInto(&line) && !line.isEmpty()) {
-        T::currentNumber = line.toInt();  // Chuyển đổi sang số nguyên
+    string line;
+    getline(file, line);// Skip dong 1
+    if (getline(file, line) && !line.empty()) {
+        T::currentNumber = std::stoi(line);
     } else {
-        qDebug() << "Dong dau tien cua file txt khong hop le hoac tep rong";
+        cerr << "Dong dau tien cua file txt khong hop le hoac tep rong" << endl;
         return;
     }
-    while (!in.atEnd()){
-        line = in.readLine();
-        if (line.isEmpty()) {
+
+    while (getline(file, line)) {
+        if (line.empty()) {
             continue;
         }
-    T obj;
-    obj.fromString(line);  // Chuyển QString sang std::string nếu cần thiết
-     add(obj);
+        T obj;
+        obj.fromString(line);
+        add(obj);
     }
     file.close();
 }
 template <typename T>
-void LinkedList<T>::updateFile(const QString& filename) const {
-    // Mở file để đọc dòng đầu tiên
-    QFile fileIn(filename);
-    QString firstLine;
-    if (fileIn.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QTextStream in(&fileIn);
-        firstLine = in.readLine(); // Đọc dòng đầu tiên
+void LinkedList<T>::updateFile(const string& filename) const {
+    ifstream fileIn(filename);
+    string firstline;
+    if (fileIn.is_open()) {
+        // Đọc dòng đầu tiên
+        getline(fileIn, firstline);
         fileIn.close();
     } else {
-        qWarning() << "Cannot open file" << filename;
+        cerr << "Cannot open file " << filename << endl;
         return;
     }
-
-    // Mở file để ghi dữ liệu
-    QFile file(filename);
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        QTextStream out(&file);
-        out << firstLine << Qt::endl; // Ghi dòng đầu tiên
-        out << T::currentNumber << Qt::endl; // Ghi số lượng hiện tại
-
-        Node* current = head;
-        while (current != nullptr) {
-            out << current->data.toString() << Qt::endl; // Ghi thông tin của từng node
-            current = current->next;
-        }
-        file.close();
-    } else {
-        qWarning() << "Cannot open file for writing" << filename;
+    ofstream file(filename);
+    file << firstline << endl;
+    file << T::currentNumber << endl;
+    Node* current = head;
+    while (current != nullptr) {
+        file << current->data.toString() << endl;
+        current = current->next;
     }
+    file.close();
 }
 
 template <typename T>
@@ -104,7 +93,7 @@ void LinkedList<T>::add(const T& data) {
     count++;
 }
 template <typename T>
-typename LinkedList<T>::Node* LinkedList<T>::deleteNode(const QString& value) {
+typename LinkedList<T>::Node* LinkedList<T>::deleteNode(const string& value) {
     Node* current = head;
     while (current != nullptr) {
         if (current->data.getID() == value) {
@@ -152,8 +141,8 @@ void LinkedList<T>::sortByID(bool ascending) {
         swapped = false;
         Node* current = head;
         while (current->next) {
-            QString id1 = current->data.getID();
-            QString id2 = current->next->data.getID();
+            string id1 = current->data.getID();
+            string id2 = current->next->data.getID();
             if (ascending ? (id1 > id2) : (id1 < id2)) {
                 swap(current->data, current->next->data);
                 swapped = true;
@@ -183,7 +172,7 @@ void LinkedList<T>::sortByID(bool ascending) {
 // }
 // //Search
 template <typename T>
-T* LinkedList<T>::searchID(const QString& ID) const{
+T* LinkedList<T>::searchID(const string& ID) const{
     Node* current = head;
     while (current) {
         if (current->data.getID() == ID) {
@@ -205,7 +194,7 @@ void LinkedList<T>::searchStatus(const int& status, Admin* adminWindow) {
 }
 
 template <typename T>
-void LinkedList<T>::searchRoomType(const QString& RT, Admin* adminWindow) {
+void LinkedList<T>::searchRoomType(const string& RT, Admin* adminWindow) {
     Node* current = head;
     while (current) {
         if (current->data.getRoomTypeID() == RT) {

@@ -1,11 +1,18 @@
+release/Account.o
 release/AddService.o
 release/Addroom.o
+release/Contract.o
+release/Date.o
 release/Editroom.o
 release/Editservice.o
 release/Edittenant.o
+release/Login.o
+release/Payment.o
+release/Reservation.o
 release/Room.o
 release/RoomType.o
 release/Service.o
+release/ServiceUsage.o
 release/Tenant.o
 release/Test.o
 release/admin.o
@@ -16,4 +23,5 @@ release/moc_Addroom.o
 release/moc_Editroom.o
 release/moc_Editservice.o
 release/moc_Edittenant.o
+release/moc_Login.o
 release/moc_admin.o

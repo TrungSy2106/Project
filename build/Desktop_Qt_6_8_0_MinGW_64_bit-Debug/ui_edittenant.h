@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -37,6 +38,9 @@ public:
     QVBoxLayout *verticalLayout_7;
     QLabel *label_7;
     QLineEdit *newage;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_8;
+    QComboBox *comboBox;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_4;
@@ -47,7 +51,7 @@ public:
     {
         if (Edittenant->objectName().isEmpty())
             Edittenant->setObjectName("Edittenant");
-        Edittenant->resize(237, 270);
+        Edittenant->resize(237, 287);
         verticalLayout = new QVBoxLayout(Edittenant);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout_3 = new QVBoxLayout();
@@ -124,6 +128,26 @@ public:
 
         verticalLayout->addLayout(verticalLayout_7);
 
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        label_8 = new QLabel(Edittenant);
+        label_8->setObjectName("label_8");
+        label_8->setMaximumSize(QSize(16777215, 15));
+        label_8->setFont(font);
+
+        horizontalLayout->addWidget(label_8);
+
+        comboBox = new QComboBox(Edittenant);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName("comboBox");
+        comboBox->setMinimumSize(QSize(0, 25));
+
+        horizontalLayout->addWidget(comboBox);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
@@ -179,14 +203,18 @@ public:
     void retranslateUi(QDialog *Edittenant)
     {
         Edittenant->setWindowTitle(QCoreApplication::translate("Edittenant", "Dialog", nullptr));
-        label_3->setText(QCoreApplication::translate("Edittenant", "Nh\341\272\255p t\303\252n", nullptr));
+        label_3->setText(QCoreApplication::translate("Edittenant", "Nh\341\272\255p h\341\273\215 v\303\240 t\303\252n", nullptr));
         newname->setPlaceholderText(QString());
         label_5->setText(QCoreApplication::translate("Edittenant", "Nh\341\272\255p s\341\273\221 \304\221i\341\273\207n tho\341\272\241i", nullptr));
         newsdt->setPlaceholderText(QString());
         label_6->setText(QCoreApplication::translate("Edittenant", "Nh\341\272\255p CCCD", nullptr));
         newcccd->setPlaceholderText(QString());
-        label_7->setText(QCoreApplication::translate("Edittenant", "Nh\341\272\255p Tu\341\273\225i", nullptr));
+        label_7->setText(QCoreApplication::translate("Edittenant", "Nh\341\272\255p n\304\203m sinh", nullptr));
         newage->setPlaceholderText(QString());
+        label_8->setText(QCoreApplication::translate("Edittenant", "Gi\341\273\233i t\303\255nh", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("Edittenant", "Nam", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("Edittenant", "N\341\273\257", nullptr));
+
         Edittenantbtn->setText(QCoreApplication::translate("Edittenant", "Update Tenant", nullptr));
         pushButton_3->setText(QCoreApplication::translate("Edittenant", "Cancel", nullptr));
     } // retranslateUi

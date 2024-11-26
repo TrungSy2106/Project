@@ -2,7 +2,6 @@
 #define ROOM_H
 #include "LinkedList.h"
 #include <QFile>
-#include <QString>
 #include <sstream>
 #include "RoomType.h"
 #include "admin.h"
@@ -12,38 +11,43 @@ class Admin;
 class Room: public RoomType
 {
 protected:
-    RoomType roomType;
-    QString room_ID;
+    RoomType* roomType;
+    string room_ID;
     int status;
-    QString tenant_ID;
+    string tenant_ID;
 public:
     friend class Admin;
-    Room(const RoomType& type, int s, const QString& tenantId = "");
     Room();
+    Room(RoomType* type, int s = 0, const string& tenantId = "N/A");
     ~Room();
+
     void setStatus(int status);
-    void setRT(const RoomType& type);
-    QString getRoomTypeID() const { return roomType.getID(); }
-    int getStatus() const { return status; }
-    QString getTenantID() const { return tenant_ID; }
-    double getRoomPrice() const { return roomType.getPrice(); }
+    void setRT(RoomType* type);
+    void setTenantID(string tenantid);
+
+    string getID() const;
+    RoomType* getRoomType() const;
+    string getRoomTypeID() const;
+    int getStatus() const;
+    double getPrice() const;
+    string getTenantID() const;
+
     void display(Admin* adminWindow) const;
-    QString getID() const;
-    void fromString(const QString& line);
-    QString toString() const;
+    void fromString(const string& line);
+    string toString() const;
     static int total;
     static int currentNumber;
     static LinkedList<Room> roomList;
-    static QString generateID(int number);
+    static string generateID(int number);
 
-    static void updateRoom(const QString& rid, int sta, const QString& rt);
-    static void updateFile(const QString& filename);
-    static void searchByID(const QString& id, Admin* adminWindow);
+    static void updateRoom(const string& rid, int sta, const string& rt);
+    static void updateFile(const string& filename);
+    static bool searchByID(const string& id, Admin* adminWindow);
     static void searchByStatus(int st, Admin* adminWindow);
-    static void searchByRoomType(const QString& RT, Admin* adminWindow);
+    static void searchByRoomType(const string& RT, Admin* adminWindow);
     static void load();
-    static void deleteRoom(const QString& rid);
-    static void addRoom(const QString& rt_id);
+    static void deleteRoom(const string& rid);
+    static void addRoom(const string& rt_id);
     static void showAllRooms(Admin* adminWindow);
     static void Ascending();
     static void Descending();

@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+using namespace std;
+
 namespace Ui {
 class Edittenant;
 }
@@ -12,7 +14,8 @@ class Edittenant : public QDialog
     Q_OBJECT
 
 public:
-    explicit Edittenant(const QString& tenantID, const QString& name, const QString& phone, int age, const QString& cccd, QWidget *parent = nullptr);
+    static int getbirthyear(int age);
+    explicit Edittenant(const string& tenantID, const string& name, const string& phone, int age, const string& cccd, const string& gender, QWidget *parent = nullptr);
     ~Edittenant();
 
 private slots:
@@ -21,11 +24,12 @@ private slots:
 
 private:
     Ui::Edittenant *ui;
-    QString tenant_ID;
-    QString name;
-    QString phone;
-    int age;
-    QString cccd;
+    string tenant_ID;
+    string name;
+    string phone;
+    int birthyear;
+    string cccd;
+    string gender;
 };
 
 #endif // EDITTENANT_H

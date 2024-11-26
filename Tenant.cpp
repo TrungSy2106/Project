@@ -1,4 +1,5 @@
 #include "Tenant.h"
+#include "Account.h"
 #include "admin.h"
 
 int Tenant::total = 0;
@@ -6,42 +7,54 @@ int Tenant::currentNumber = 0;
 LinkedList<Tenant> Tenant::tenantList;
 
 Tenant::Tenant() {}
-Tenant::Tenant(const QString& name, const QString& phone, const QString& cccd, int age)
-    : name(name), phone(phone), age(age), cccd(cccd) {
-    currentNumber++;
+Tenant::Tenant(const string& lastName, const string& firstName, const string& phone, const string& cccd, int birthyear, bool gender)
+    : lastName(lastName), firstName(firstName), phone(phone), birthyear(birthyear), cccd(cccd), gender(gender) {
     total++;
-    tenant_ID = generateID(currentNumber);
+    tenant_ID = generateID(++currentNumber);
 }
 Tenant::~Tenant() {}
 
-QString Tenant::getID() const { return tenant_ID; }
-QString Tenant::getName() const { return name; }
+string Tenant::getID() const { return tenant_ID; }
+string Tenant::getLastName() const { return lastName; }
+string Tenant::getFirstName() const { return firstName; }
+string Tenant::getFullName() const { return lastName + " " + firstName; }
+int Tenant::getAge() const {
+    time_t now = time(0);
+    tm* ltm = localtime(&now);
+    return (1900 + ltm->tm_year) - birthyear;
+}
+string Tenant::getPhone() const { return phone; }
+string Tenant::getCCCD() const { return cccd; }
+bool Tenant::getGender() const { return gender; }
 
-void Tenant::setName(const QString& name) { this->name = name; }
-void Tenant::setPhone(const QString& phone) { this->phone = phone; }
-void Tenant::setAge(int age) { this->age = age; }
-void Tenant::setCCCD(const QString& cccd) { this->cccd = cccd; }
 
-QString Tenant::generateID(int number) {
+void Tenant::setLastName(const string& lastName) { this->lastName = lastName; }
+void Tenant::setFirstName(const string& firstName) { this->firstName = firstName; }
+void Tenant::setPhone(const string& phone) { this->phone = phone; }
+void Tenant::setBirthyear(int birthyear) { this->birthyear = birthyear; }
+void Tenant::setCCCD(const string& cccd) { this->cccd = cccd; }
+void Tenant::setGender(bool gender) { this->gender = gender; }
+
+string Tenant::generateID(int number) {
     stringstream ss;
     ss << "T." << setw(3) << setfill('0') << number;
-    return QString::fromStdString(ss.str());
+    return ss.str();
 }
 
-void Tenant::updateFile(const QString& filename) { tenantList.updateFile(filename); }
+void Tenant::updateFile(const string& filename) { tenantList.updateFile(filename); }
 
 void Tenant::showAllTenants(Admin* adminWindow) {
     tenantList.show(adminWindow);
 }
 
-void Tenant::load(const QString& filename) { tenantList.load(filename); }
+void Tenant::load(const string& filename) { tenantList.load(filename); }
 
 void Tenant::display(Admin* adminWindow) const {
-    adminWindow->displayTenant(*this);  // Gọi hàm displayRoom của Admin với Room hiện tại
+    adminWindow->displayTenants(*this);  // Gọi hàm displayRoom của Admin với Room hiện tại
 }
 
-// void Tenant::fromString(const QString& line) {
-//     QStringList fields = line.split(',');
+// void Tenant::fromString(const string& line) {
+//     stringList fields = line.split(',');
 
 //     tenant_ID = fields[0].trimmed();
 //     cccd = fields[1].trimmed();
@@ -52,50 +65,71 @@ void Tenant::display(Admin* adminWindow) const {
 //     total++;
 // }
 
-void Tenant::fromString(const QString& line) {
-    stringstream ss(line.toStdString());
-    string tid, t_cccd, t_name, sdt;
-    getline(ss, tid, ',');
-    tenant_ID = QString::fromStdString(tid);
-    getline(ss, t_cccd, ',');
-    cccd = QString::fromStdString(t_cccd);
-    getline(ss, t_name, ',');
-    name = QString::fromStdString(t_name);
-    getline(ss, sdt, ',');
-    phone = QString::fromStdString(sdt);
-    ss >> age;
+void Tenant::fromString(const string& line) {
+    stringstream ss(line);
+    getline(ss, tenant_ID, ',');
+    getline(ss, cccd, ',');
+    getline(ss, lastName, ',');
+    getline(ss, firstName, ',');
+    getline(ss, phone, ',');
+    ss >> birthyear;
+    ss.ignore();
+    ss >> gender;
     total++;
 }
 
-QString Tenant::toString() const {
-    return tenant_ID + "," + cccd + "," + name + "," + phone + "," + QString::number(age);
+string Tenant::toString() const {
+    stringstream ss;
+    ss << tenant_ID << "," << cccd << "," << lastName << "," << firstName << "," << phone << "," << birthyear << "," << gender;
+    return ss.str();
 }
-
-void Tenant::updateTenant(const QString& tenantId, const QString& name, const QString& phone, const QString& cccd, int age) {
-    Tenant* tenant = tenantList.searchID(tenantId);
-    tenant->setName(name);
+void Tenant::updateTenant(const string& tenantId, const string& lastname, const string& firstname, const string& phone, const string& cccd, int birthyear, bool genderInput) {
+    string id;
+    if (Account::currentTenantID == "Admin") {
+        id = tenantId;
+    } else {
+        id = Account::currentTenantID;
+    }
+    Tenant* tenant = tenantList.searchID(id);
+    tenant->setLastName(lastname);
+    tenant->setFirstName(firstname);
     tenant->setPhone(phone);
     tenant->setCCCD(cccd);
-    tenant->setAge(age);
+    tenant->setBirthyear(birthyear);
+    tenant->setGender(genderInput);
     Tenant::updateFile("Tenant.txt");
 }
 
-void Tenant::searchByID(const QString& id, Admin* adminWindow) {
-    Tenant* tenant = tenantList.searchID(id);
-    if (tenant)
-        adminWindow->displayTenant(*tenant);
-    else return;
+// void Tenant::searchByID(const string& id, Admin* adminWindow) {
+//     Tenant* tenant = tenantList.searchID(id);
+//     if (tenant)
+//         adminWindow->displayTenant(*tenant);
+//     else return;
+// }
+bool Tenant::searchByID(const string& id, Admin* adminWindow) {
+    bool found = false;
+    LinkedList<Tenant>::Node* current = tenantList.begin();
+    while (current != nullptr) {
+        string ID = current->data.getID();
+        if ( ID.find(id) != string::npos) {
+            current->data.display(adminWindow);
+            found = true;
+        }
+        current = current->next;
+    }
+    return found;
 }
 
-// void Tenant::searchByName(const QString& name, Admin* adminWindow){
+// void Tenant::searchByName(const string& name, Admin* adminWindow){
 //     tenantList.searchStatus(name, adminWindow);
 // }
 
-void Tenant::searchByName(const QString& name, Admin* adminWindow) {
+void Tenant::searchByName(const string& name, Admin* adminWindow) {
     bool found = false;
-    LinkedList<Tenant>::Node* current = tenantList.getHead();
+    LinkedList<Tenant>::Node* current = tenantList.begin();
     while (current != nullptr) {
-        if (current->data.getName() == name) {
+        string fullName = current->data.getFullName();
+        if ( fullName.find(name) != string::npos) {
             current->data.display(adminWindow);
             found = true;
         }

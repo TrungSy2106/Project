@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>750</height>
+    <width>1500</width>
+    <height>800</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1500</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Room Management System</string>
@@ -66,7 +72,7 @@ border:none;
       <property name="frameShadow">
        <enum>QFrame::Shadow::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
        <property name="spacing">
         <number>10</number>
        </property>
@@ -132,7 +138,7 @@ border:none;
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
          <property name="spacing">
           <number>10</number>
          </property>
@@ -285,6 +291,186 @@ border-radius:3px;
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="SerUsage1btn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/dashboard.png</normaloff>
+             <normalon>:/new/prefix1/Resources/dashboard1.png</normalon>:/new/prefix1/Resources/dashboard.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Reservation1btn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/booking.png</normaloff>
+             <normalon>:/new/prefix1/Resources/dashboard1.png</normalon>:/new/prefix1/Resources/booking.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Paymentbtn1">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/dashboard.png</normaloff>
+             <normalon>:/new/prefix1/Resources/dashboard1.png</normalon>:/new/prefix1/Resources/dashboard.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="SerUsage1btn_4">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/dashboard.png</normaloff>
+             <normalon>:/new/prefix1/Resources/dashboard1.png</normalon>:/new/prefix1/Resources/dashboard.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Contractbtn1">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/contract.png</normaloff>
+             <normalon>:/new/prefix1/Resources/dashboard1.png</normalon>:/new/prefix1/Resources/contract.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
@@ -301,7 +487,7 @@ border-radius:3px;
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="signoutbtn1">
          <property name="styleSheet">
           <string notr="true">QPushButton:checked{
 background-color:white;
@@ -365,7 +551,7 @@ border:none;
       <property name="frameShadow">
        <enum>QFrame::Shadow::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
        <property name="spacing">
         <number>10</number>
        </property>
@@ -461,9 +647,7 @@ border-radius:3px;
            </property>
            <property name="icon">
             <iconset resource="Icon.qrc">
-             <normaloff>:/new/prefix1/Resources/dashboardbig.png</normaloff>
-             <normalon>:/new/prefix1/Resources/dashboardbig1.png</normalon>
-             <disabledoff>:/new/prefix1/Resources/dashboardbig.png</disabledoff>:/new/prefix1/Resources/dashboardbig.png</iconset>
+             <normaloff>:/new/prefix1/Resources/dashboardbig.png</normaloff>:/new/prefix1/Resources/dashboardbig.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -614,6 +798,231 @@ border-radius:3px;
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="SerUsagebtn">
+           <property name="minimumSize">
+            <size>
+             <width>186</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+padding-left :-43px
+}
+QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/Roomb1.png</normaloff>
+             <normalon>:/new/prefix1/Resources/Roomb2.png</normalon>:/new/prefix1/Resources/Roomb1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>110</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ReservationUsagebtn">
+           <property name="minimumSize">
+            <size>
+             <width>186</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+padding-left :-43px
+}
+QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/Roomb1.png</normaloff>
+             <normalon>:/new/prefix1/Resources/Roomb2.png</normalon>:/new/prefix1/Resources/Roomb1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>110</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Paymentbtn">
+           <property name="minimumSize">
+            <size>
+             <width>186</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+padding-left :-43px
+}
+QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/Roomb1.png</normaloff>
+             <normalon>:/new/prefix1/Resources/Roomb2.png</normalon>:/new/prefix1/Resources/Roomb1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>110</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="SerUsagebtn_4">
+           <property name="minimumSize">
+            <size>
+             <width>186</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+padding-left :-43px
+}
+QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/Roomb1.png</normaloff>
+             <normalon>:/new/prefix1/Resources/Roomb2.png</normalon>:/new/prefix1/Resources/Roomb1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>110</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Contractbtn">
+           <property name="minimumSize">
+            <size>
+             <width>186</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+padding-left :-43px
+}
+QPushButton:checked{
+background-color:white;
+border-radius:3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/new/prefix1/Resources/Roomb1.png</normaloff>
+             <normalon>:/new/prefix1/Resources/Roomb2.png</normalon>:/new/prefix1/Resources/Roomb1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>110</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
@@ -630,7 +1039,7 @@ border-radius:3px;
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_16">
+        <widget class="QPushButton" name="signoutbtn">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -728,6 +1137,7 @@ border:none;
        <widget class="QFrame" name="frame_3">
         <property name="styleSheet">
          <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
 border:none;
 }
 </string>
@@ -741,6 +1151,12 @@ border:none;
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
           <widget class="QStackedWidget" name="stackedWidget">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>600</height>
+            </size>
+           </property>
            <widget class="QWidget" name="page">
             <widget class="QLabel" name="label">
              <property name="geometry">
@@ -757,186 +1173,182 @@ border:none;
             </widget>
            </widget>
            <widget class="QWidget" name="page_2">
-            <layout class="QVBoxLayout" name="verticalLayout_6">
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_9">
-               <item>
-                <widget class="QLabel" name="label_5">
-                 <property name="font">
-                  <font>
-                   <pointsize>16</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Room List</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_6">
-                 <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>93</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <layout class="QVBoxLayout" name="verticalLayout_6">
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
                  <item>
-                  <widget class="QLabel" name="label_2">
+                  <widget class="QLabel" name="label_5">
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
-                    <string>Total: </string>
+                    <string>Room List</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="totalroom">
+                  <spacer name="horizontalSpacer_6">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <widget class="QLabel" name="label_2">
+                     <property name="text">
+                      <string>Total: </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="totalroom">
+                     <property name="text">
+                      <string>TextLabel</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="addroom">
+                   <property name="minimumSize">
+                    <size>
+                     <width>70</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+}</string>
+                   </property>
                    <property name="text">
-                    <string>TextLabel</string>
+                    <string>Add Room</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="Icon.qrc">
+                     <normaloff>:/new/prefix1/Resources/add.png</normaloff>:/new/prefix1/Resources/add.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>10</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBSR">
+                   <item>
+                    <property name="text">
+                     <string>Choose</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Phòng đang trống</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Phòng đã có người thuê</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Phòng đang bảo trì</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="LineEditSearchRoom">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+padding-left:5px;
+border: 1px solid gray;
+border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Search here ...</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="Refbtn">
+                   <property name="text">
+                    <string>Refresh</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="Icon.qrc">
+                     <normaloff>:/new/prefix1/Resources/reload.png</normaloff>:/new/prefix1/Resources/reload.png</iconset>
                    </property>
                   </widget>
                  </item>
                 </layout>
                </item>
                <item>
-                <spacer name="horizontalSpacer_4">
-                 <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QPushButton" name="addroom">
+                <widget class="QTableWidget" name="table1">
                  <property name="minimumSize">
                   <size>
-                   <width>70</width>
-                   <height>0</height>
+                   <width>1000</width>
+                   <height>600</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QPushButton{
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Add Room</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Icon.qrc">
-                   <normaloff>:/new/prefix1/Resources/add.png</normaloff>:/new/prefix1/Resources/add.png</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>10</width>
-                   <height>10</height>
-                  </size>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QComboBox" name="CBSR">
-                 <item>
-                  <property name="text">
-                   <string>Room ID</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Room Type</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Phòng đang trống</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Phòng đã có người thuê</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Phòng đang bảo trì</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="LineEditSearchRoom">
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit{
-padding-left:20px;
-border: 1px solid gray;
-border-radius: 10px;
-}</string>
-                 </property>
-                 <property name="placeholderText">
-                  <string>Search here ...</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="searchroom">
-                 <property name="text">
-                  <string>Search</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Icon.qrc">
-                   <normaloff>:/new/prefix1/Resources/loupe.png</normaloff>:/new/prefix1/Resources/loupe.png</iconset>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="Refbtn">
-                 <property name="text">
-                  <string>Refresh</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Icon.qrc">
-                   <normaloff>:/new/prefix1/Resources/reload.png</normaloff>:/new/prefix1/Resources/reload.png</iconset>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QTableWidget" name="table1">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>500</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton{
 	 border: none;
 }
 QTableWidget::item {
@@ -949,95 +1361,128 @@ QHeaderView::section {
        border-right: none;      
        border-left: none;       
 }</string>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                 </property>
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+                 </property>
+                 <property name="showGrid">
+                  <bool>false</bool>
+                 </property>
+                 <attribute name="horizontalHeaderVisible">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderCascadingSectionResizes">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderHighlightSections">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>false</bool>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>Mã phòng</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Loại phòng</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Trạng thái</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Mã khách thuê</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Tên khách thuê</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Giá</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Action</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
                </property>
-               <property name="editTriggers">
-                <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>92</width>
+                 <height>20</height>
+                </size>
                </property>
-               <property name="alternatingRowColors">
-                <bool>true</bool>
-               </property>
-               <property name="selectionMode">
-                <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
-               </property>
-               <property name="showGrid">
-                <bool>false</bool>
-               </property>
-               <attribute name="horizontalHeaderVisible">
-                <bool>true</bool>
-               </attribute>
-               <attribute name="horizontalHeaderCascadingSectionResizes">
-                <bool>false</bool>
-               </attribute>
-               <attribute name="horizontalHeaderHighlightSections">
-                <bool>true</bool>
-               </attribute>
-               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-                <bool>false</bool>
-               </attribute>
-               <attribute name="horizontalHeaderStretchLastSection">
-                <bool>false</bool>
-               </attribute>
-               <column>
-                <property name="text">
-                 <string>Mã phòng</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Loại phòng</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Trạng thái</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Mã khách thuê</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Giá</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Action</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-               </column>
-              </widget>
+              </spacer>
              </item>
             </layout>
            </widget>
@@ -1110,6 +1555,11 @@ QHeaderView::section {
                 <widget class="QComboBox" name="CBST">
                  <item>
                   <property name="text">
+                   <string>Choose</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
                    <string>Tenant ID</string>
                   </property>
                  </item>
@@ -1131,20 +1581,6 @@ border-radius: 10px;
                  </property>
                  <property name="placeholderText">
                   <string>Search here ...</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="searchtenant">
-                 <property name="text">
-                  <string>Search</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Icon.qrc">
-                   <normaloff>:/new/prefix1/Resources/loupe.png</normaloff>:/new/prefix1/Resources/loupe.png</iconset>
-                 </property>
-                 <property name="checkable">
-                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
@@ -1240,6 +1676,11 @@ QHeaderView::section {
                  <font>
                   <pointsize>10</pointsize>
                  </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Gender</string>
                 </property>
                </column>
                <column>
@@ -1354,6 +1795,11 @@ background-color: rgb(255, 255, 255);
                </item>
                <item>
                 <widget class="QComboBox" name="CBSS">
+                 <item>
+                  <property name="text">
+                   <string>Choose</string>
+                  </property>
+                 </item>
                  <item>
                   <property name="text">
                    <string>Service ID</string>
@@ -1518,6 +1964,1155 @@ QHeaderView::section {
                 </property>
                </column>
               </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_5">
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_27">
+               <item>
+                <widget class="QLabel" name="label_18">
+                 <property name="font">
+                  <font>
+                   <pointsize>16</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Service Usage List</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_19">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_28">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_29">
+                 <item>
+                  <widget class="QLabel" name="label_19">
+                   <property name="text">
+                    <string>Total: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="totalserviceUsage">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_20">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QComboBox" name="CBSSUsage">
+                 <item>
+                  <property name="text">
+                   <string>Choose</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Service ID</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Service Name</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="LineEditSearchSerUsage">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit{
+padding-left:20px;
+border: 1px solid gray;
+border-radius: 10px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Search here ...</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="searchSerUsage">
+                 <property name="text">
+                  <string>Search</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Icon.qrc">
+                   <normaloff>:/new/prefix1/Resources/loupe.png</normaloff>:/new/prefix1/Resources/loupe.png</iconset>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="RefbtnSer_3">
+                 <property name="text">
+                  <string>Refresh</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Icon.qrc">
+                   <normaloff>:/new/prefix1/Resources/reload.png</normaloff>:/new/prefix1/Resources/reload.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="SerUsageTable">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>500</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	 border: none;
+}
+QTableWidget::item {
+       border-right: none;
+       border-left: none;
+       border-bottom: 1px solid #D3D3D3;
+}
+QHeaderView::section {
+       border: 1px solid #D3D3D3; 
+       border-right: none;      
+       border-left: none;       
+}</string>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+               </property>
+               <property name="showGrid">
+                <bool>false</bool>
+               </property>
+               <attribute name="horizontalHeaderVisible">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderCascadingSectionResizes">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Usage ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Room ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Service ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Tenant ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Status</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_6">
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>50</y>
+               <width>529</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_17">
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>Total: </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="totalroom_3">
+                  <property name="text">
+                   <string>TextLabel</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_13">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QComboBox" name="CBSRer">
+                <item>
+                 <property name="text">
+                  <string>Choose</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Room ID</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Room Type</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Phòng đang trống</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Phòng đã có người thuê</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Phòng đang bảo trì</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="LineEditSearchRe">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+padding-left:20px;
+border: 1px solid gray;
+border-radius: 10px;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>Search here ...</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="searchRer">
+                <property name="text">
+                 <string>Search</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Icon.qrc">
+                  <normaloff>:/new/prefix1/Resources/loupe.png</normaloff>:/new/prefix1/Resources/loupe.png</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="RefRebtn">
+                <property name="text">
+                 <string>Refresh</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Icon.qrc">
+                  <normaloff>:/new/prefix1/Resources/reload.png</normaloff>:/new/prefix1/Resources/reload.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="layoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>10</y>
+               <width>126</width>
+               <height>24</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Reservation List</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QTableWidget" name="ReservationTable">
+             <property name="geometry">
+              <rect>
+               <x>41</x>
+               <y>85</y>
+               <width>900</width>
+               <height>600</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>900</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	 border: none;
+}
+QTableWidget::item {
+       border-right: none;
+       border-left: none;
+       border-bottom: 1px solid #D3D3D3;
+}
+QHeaderView::section {
+       border: 1px solid #D3D3D3; 
+       border-right: none;      
+       border-left: none;       
+}</string>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+             </property>
+             <property name="showGrid">
+              <bool>false</bool>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>false</bool>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>Reservation ID</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Room ID</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Tenant ID</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Start Date</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>End Date</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Status</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Action</string>
+              </property>
+             </column>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_7">
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_19">
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="font">
+                  <font>
+                   <pointsize>16</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Payment List</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_17">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="text">
+                    <string>Total: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="totalroom_4">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_18">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QComboBox" name="CBSRer_2">
+                 <item>
+                  <property name="text">
+                   <string>Choose</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Room ID</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Room Type</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Phòng đang trống</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Phòng đã có người thuê</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Phòng đang bảo trì</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="LineEditSearchRe_2">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit{
+padding-left:20px;
+border: 1px solid gray;
+border-radius: 10px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Search here ...</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="searchRer_2">
+                 <property name="text">
+                  <string>Search</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Icon.qrc">
+                   <normaloff>:/new/prefix1/Resources/loupe.png</normaloff>:/new/prefix1/Resources/loupe.png</iconset>
+                 </property>
+                 <property name="checkable">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="RefRebtn_2">
+                 <property name="text">
+                  <string>Refresh</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Icon.qrc">
+                   <normaloff>:/new/prefix1/Resources/reload.png</normaloff>:/new/prefix1/Resources/reload.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="PaymentTable">
+               <property name="minimumSize">
+                <size>
+                 <width>900</width>
+                 <height>600</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	 border: none;
+}
+QTableWidget::item {
+       border-right: none;
+       border-left: none;
+       border-bottom: 1px solid #D3D3D3;
+}
+QHeaderView::section {
+       border: 1px solid #D3D3D3; 
+       border-right: none;      
+       border-left: none;       
+}</string>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+               </property>
+               <property name="showGrid">
+                <bool>false</bool>
+               </property>
+               <attribute name="horizontalHeaderVisible">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderCascadingSectionResizes">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Payment ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Room ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Tenant ID</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Rent Amount</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Service Amount</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Total Amount</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Pay Month</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Pay Year</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Pay Date</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Status</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Remaining</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_8"/>
+           <widget class="QWidget" name="page_9">
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <spacer name="horizontalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>144</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_30">
+                 <item>
+                  <widget class="QLabel" name="label_17">
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Contract List</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_22">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_25">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_26">
+                   <item>
+                    <widget class="QLabel" name="label_16">
+                     <property name="text">
+                      <string>Total: </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="totalroom_5">
+                     <property name="text">
+                      <string>TextLabel</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_21">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBSRer_3">
+                   <item>
+                    <property name="text">
+                     <string>Choose</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Room ID</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Room Type</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Phòng đang trống</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Phòng đã có người thuê</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Phòng đang bảo trì</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="LineEditSearchRe_3">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+padding-left:20px;
+border: 1px solid gray;
+border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Search here ...</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="searchRer_3">
+                   <property name="text">
+                    <string>Search</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="Icon.qrc">
+                     <normaloff>:/new/prefix1/Resources/loupe.png</normaloff>:/new/prefix1/Resources/loupe.png</iconset>
+                   </property>
+                   <property name="checkable">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="RefRebtn_3">
+                   <property name="text">
+                    <string>Refresh</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="Icon.qrc">
+                     <normaloff>:/new/prefix1/Resources/reload.png</normaloff>:/new/prefix1/Resources/reload.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="ContractTable">
+                 <property name="minimumSize">
+                  <size>
+                   <width>1200</width>
+                   <height>600</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+	 border: none;
+}
+QTableWidget::item {
+       border-right: none;
+       border-left: none;
+       border-bottom: 1px solid #D3D3D3;
+}
+QHeaderView::section {
+       border: 1px solid #D3D3D3; 
+       border-right: none;      
+       border-left: none;       
+}</string>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                 </property>
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+                 </property>
+                 <property name="showGrid">
+                  <bool>false</bool>
+                 </property>
+                 <attribute name="horizontalHeaderVisible">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderCascadingSectionResizes">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderHighlightSections">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>false</bool>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>Contract ID</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Room ID</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Room Type</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Tenant ID</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Name</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Age</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>CCCD</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Phone</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Start Date</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>End Date</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Price</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Status</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Action</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_12">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>143</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>
@@ -1692,6 +3287,38 @@ QHeaderView::section {
     <hint type="destinationlabel">
      <x>87</x>
      <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signoutbtn1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signoutbtn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>776</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>777</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signoutbtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signoutbtn1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>783</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>55</x>
+     <y>784</y>
     </hint>
    </hints>
   </connection>

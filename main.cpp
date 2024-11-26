@@ -1,10 +1,15 @@
 #include "admin.h"
+#include "Login.h"
 // #include "Test.h"
 // #include "Menu.h"
 #include "RoomType.h"
 #include "Room.h"
 #include "Tenant.h"
 #include "Service.h"
+#include "ServiceUsage.h"
+#include "Reservation.h"
+#include "Payment.h"
+#include "Contract.h"
 
 #include <QApplication>
 
@@ -18,14 +23,16 @@ int main(int argc, char *argv[]) {
     // Room::load();
     Tenant::load("Tenant.txt");
     Service::load("Service.txt");
-    // ServiceUsage::load("E:\\GUI\\Data\\ServiceUsage.txt");
-    // Reservation::load("E:\\GUI\\Data\\Reservation.txt");
-    // Contract::load("E:\\GUI\\Data\\Contract.txt");
+    ServiceUsage::load("ServiceUsage.txt");
+    Reservation::load("Reservation.txt");
+    Account::load("Account.txt");
+    Payment::load("Payment.txt");
+    Contract::load("Contract.txt");
     // displayMenu(roomList, tenantList, serviceList, serviceusageList, reservationList, paymentList);
     // Room::showAllRooms(roomList);
 
     QApplication a(argc, argv);
-    Admin w;
+    Login w;
     w.show();
     return a.exec();
     // return 0;

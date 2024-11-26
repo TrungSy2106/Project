@@ -1,46 +1,56 @@
 #ifndef TENANT_H
 #define TENANT_H
 
-#include <QString>
+#include <string>
 #include <sstream>
 #include "LinkedList.h"
 #include "admin.h"
 
 class Tenant
 {
-    QString tenant_ID;
-    QString name;
-    QString phone;
-    int age;
-    QString cccd;
+    string tenant_ID;
+    string lastName;
+    string firstName;
+    string phone;
+    int birthyear;
+    string cccd;
+    bool gender;
 public:
     friend class Admin;
     static int total;
     static int currentNumber;
     static LinkedList<Tenant> tenantList;
     Tenant();
-    Tenant(const QString& name, const QString& phone, const QString& cccd, int age);
+    Tenant(const string& lastName, const string& firstName, const string& phone, const string& cccd, int birthyear, bool gender);
     ~Tenant();
-    static QString generateID(int number);
-    QString getID() const;
-    QString getName() const;
+    static string generateID(int number);
+    string getID() const;
+    string getLastName() const;
+    string getFirstName() const;
+    string getFullName() const;
+    string getPhone() const;
+    int getAge() const;
+    string getCCCD() const;
+    bool getGender() const;
 
-    void fromString(const QString& line);
-    QString toString() const;
+    void fromString(const string& line);
+    string toString() const;
 
-    void setName(const QString& name);
-    void setPhone(const QString& phone);
-    void setAge(int age);
-    void setCCCD(const QString& cccd);
+    void setLastName(const string& lastName);
+    void setFirstName(const string& firstName);
+    void setPhone(const string& phone);
+    void setBirthyear(int birthyear);
+    void setCCCD(const string& cccd);
+    void setGender(bool gender);
 
     void display(Admin* adminWindow) const;
 
     static void showAllTenants(Admin* adminWindow);
-    static void searchByID(const QString& id, Admin* adminWindow);
-    static void searchByName(const QString& name, Admin* adminWindow);
-    static void load(const QString& filename);
-    static void updateFile(const QString& filename);
-    static void updateTenant(const QString& tenantId, const QString& name, const QString& phone, const QString& cccd, int age);
+    static bool searchByID(const string& id, Admin* adminWindow);
+    static void searchByName(const string& name, Admin* adminWindow);
+    static void load(const string& filename);
+    static void updateFile(const string& filename);
+    static void updateTenant(const string& tenantId, const string& lastname, const string& firstname, const string& phone, const string& cccd, int age, bool genderInput);
 };
 
 #endif // TENANT_H

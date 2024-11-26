@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+using namespace std;
+
 namespace Ui {
 class Editservice;
 }
@@ -12,7 +14,7 @@ class Editservice : public QDialog
     Q_OBJECT
 
 public:
-    explicit Editservice(const QString& service_ID, const QString& name, int price, const QString& des, QWidget *parent = nullptr);
+    explicit Editservice(const string& service_ID, const string& name, int price, const string& des, QWidget *parent = nullptr);
     ~Editservice();
 
 private slots:
@@ -20,10 +22,10 @@ private slots:
 
 private:
     Ui::Editservice *ui;
-    QString service_ID;
-    QString name;
+    string service_ID;
+    string name;
     int unit_price;
-    QString description;
+    string description;
 };
 
 #endif // EDITSERVICE_H

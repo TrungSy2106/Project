@@ -1,6 +1,6 @@
 #ifndef ROOMTYPE_H
 #define ROOMTYPE_H
-#include <QString>
+#include <string>
 #include "LinkedList.h"
 #include "admin.h"
 
@@ -8,23 +8,25 @@ class Admin;
 class RoomType
 {
 protected:
-    QString type_ID;
-    QString description;
+    string type_ID;
+    string description;
     double price;
 public:
     friend class Admin;
-    QString getID() const;
+    string getID() const;
     double getPrice() const;
+    string getDescription() const;
+
     static LinkedList<RoomType> roomTypeList;
     static int total;
     static int currentNumber;
     RoomType();
-    RoomType(const QString& desc, double price);
-    RoomType(const QString id, const QString& desc, double price);
+    RoomType(const string& desc, double price);
+    RoomType(const string id, const string& desc, double price);
     // static void searchByID();
-    static QString generateID(int number);
-    static void load(const QString& filename);
-    void fromString(const QString& line);
+    static string generateID(int number);
+    static void load(const string& filename);
+    void fromString(const string& line);
 };
 
 #endif // ROOMTYPE_H

@@ -1,32 +1,31 @@
 #include "RoomType.h"
 #include <QTextStream>
-#include <QString>
-#include <QStringList>
+#include <string>
 
 int RoomType::total = 0;
 int RoomType::currentNumber = 0;
 LinkedList<RoomType> RoomType::roomTypeList;
 RoomType::RoomType() {}
-RoomType::RoomType(const QString& desc, double price)
+RoomType::RoomType(const string& desc, double price)
     : description(desc), price(price){
     type_ID = generateID(++currentNumber);
 }
 
 double RoomType::getPrice() const { return price; }
-QString RoomType::getID() const { return type_ID; }
+string RoomType::getID() const { return type_ID; }
+string RoomType::getDescription() const { return description; }
 
-QString RoomType::generateID(int number) {
-    QString str;
-    QTextStream ss(&str);
-    ss << "RT." << QString("%1").arg(number, 2, 10, QChar('0'));
-    return str;
+string RoomType::generateID(int number) {
+    stringstream ss;
+    ss << "RT." << setw(2) << setfill('0') << number;
+    return ss.str();
 }
 
-void RoomType::load(const QString& filename) { roomTypeList.load(filename); }
+void RoomType::load(const string& filename) { roomTypeList.load(filename); }
 
-// void RoomType::fromString(const QString& line) {
-//     // Sử dụng QStringList để tách các phần của chuỗi
-//     QStringList parts = line.split(',');
+// void RoomType::fromString(const string& line) {
+//     // Sử dụng stringList để tách các phần của chuỗi
+//     stringList parts = line.split(',');
 
 //     if (parts.size() < 3) {
 //         qWarning() << "Line format is invalid:" << line;
@@ -41,13 +40,10 @@ void RoomType::load(const QString& filename) { roomTypeList.load(filename); }
 //     total++;
 // }
 
-void RoomType::fromString(const QString& line) {
-    stringstream ss(line.toStdString());
-    string t_id, des;
-    getline(ss, t_id, ',');
-    type_ID = QString::fromStdString(t_id);
-    getline(ss, des, ',');
-    description = QString::fromStdString(des);
+void RoomType::fromString(const string& line) {
+    stringstream ss(line);
+    getline(ss, type_ID, ',');
+    getline(ss, description, ',');
     ss >> price;
     total++;
 }
