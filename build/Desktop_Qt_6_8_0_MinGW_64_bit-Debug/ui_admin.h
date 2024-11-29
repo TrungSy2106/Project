@@ -32,7 +32,7 @@ class Ui_Admin
 {
 public:
     QWidget *centralwidget;
-    QHBoxLayout *horizontalLayout_54;
+    QHBoxLayout *horizontalLayout;
     QFrame *MI_AD;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_3;
@@ -77,7 +77,6 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pushButton_5;
     QSpacerItem *horizontalSpacer_3;
-    QHBoxLayout *horizontalLayout;
     QFrame *frame_3;
     QHBoxLayout *horizontalLayout_4;
     QStackedWidget *stackedWidget;
@@ -299,23 +298,22 @@ public:
     QSpacerItem *verticalSpacer_5;
     QSpacerItem *horizontalSpacer_31;
     QWidget *page_12;
-    QFrame *frame;
 
     void setupUi(QMainWindow *Admin)
     {
         if (Admin->objectName().isEmpty())
             Admin->setObjectName("Admin");
-        Admin->resize(1519, 800);
+        Admin->resize(1500, 800);
         Admin->setMinimumSize(QSize(1000, 600));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/prefix1/Resources/logoooo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         Admin->setWindowIcon(icon);
         centralwidget = new QWidget(Admin);
         centralwidget->setObjectName("centralwidget");
-        horizontalLayout_54 = new QHBoxLayout(centralwidget);
-        horizontalLayout_54->setSpacing(0);
-        horizontalLayout_54->setObjectName("horizontalLayout_54");
-        horizontalLayout_54->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout(centralwidget);
+        horizontalLayout->setSpacing(0);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         MI_AD = new QFrame(centralwidget);
         MI_AD->setObjectName("MI_AD");
         MI_AD->setMinimumSize(QSize(71, 0));
@@ -420,11 +418,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/Service.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/Service1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/Person1.png"), QSize(), QIcon::Mode::Disabled, QIcon::State::Off);
-        Serbtn->setIcon(icon4);
+        Serbtn->setIcon(icon3);
         Serbtn->setIconSize(QSize(30, 18));
         Serbtn->setCheckable(true);
         Serbtn->setAutoExclusive(true);
@@ -438,10 +432,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/ServiceUsage.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/serviceusage1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        SerUsage1btn->setIcon(icon5);
+        SerUsage1btn->setIcon(icon1);
         SerUsage1btn->setIconSize(QSize(30, 18));
         SerUsage1btn->setCheckable(true);
         SerUsage1btn->setAutoExclusive(true);
@@ -455,10 +446,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/booking.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/booking1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Reservation1btn->setIcon(icon6);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/booking.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboard1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        Reservation1btn->setIcon(icon4);
         Reservation1btn->setIconSize(QSize(30, 18));
         Reservation1btn->setCheckable(true);
         Reservation1btn->setAutoExclusive(true);
@@ -472,10 +463,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/new/prefix1/Resources/payment.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon7.addFile(QString::fromUtf8(":/new/prefix1/Resources/payment1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Paymentbtn1->setIcon(icon7);
+        Paymentbtn1->setIcon(icon1);
         Paymentbtn1->setIconSize(QSize(30, 18));
         Paymentbtn1->setCheckable(true);
         Paymentbtn1->setAutoExclusive(true);
@@ -489,10 +477,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Statistics.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Statistics1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Statisticsbtn1->setIcon(icon8);
+        Statisticsbtn1->setIcon(icon1);
         Statisticsbtn1->setIconSize(QSize(30, 18));
         Statisticsbtn1->setCheckable(true);
         Statisticsbtn1->setAutoExclusive(true);
@@ -506,10 +491,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/contract.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/contract1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Contractbtn1->setIcon(icon9);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/contract.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboard1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        Contractbtn1->setIcon(icon5);
         Contractbtn1->setIconSize(QSize(30, 18));
         Contractbtn1->setCheckable(true);
         Contractbtn1->setAutoExclusive(true);
@@ -523,10 +508,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/Account.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/Account1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Accountbtn1->setIcon(icon10);
+        Accountbtn1->setIcon(icon1);
         Accountbtn1->setIconSize(QSize(30, 18));
         Accountbtn1->setCheckable(true);
         Accountbtn1->setAutoExclusive(true);
@@ -540,10 +522,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/roomtype.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/roomtype1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        RoomTypebtn1->setIcon(icon11);
+        RoomTypebtn1->setIcon(icon1);
         RoomTypebtn1->setIconSize(QSize(30, 18));
         RoomTypebtn1->setCheckable(true);
         RoomTypebtn1->setAutoExclusive(true);
@@ -563,10 +542,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon12.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        signoutbtn1->setIcon(icon12);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        signoutbtn1->setIcon(icon6);
         signoutbtn1->setIconSize(QSize(20, 20));
         signoutbtn1->setCheckable(true);
         signoutbtn1->setAutoExclusive(true);
@@ -574,7 +553,7 @@ public:
         verticalLayout_5->addWidget(signoutbtn1);
 
 
-        horizontalLayout_54->addWidget(MI_AD);
+        horizontalLayout->addWidget(MI_AD);
 
         MIT_AD = new QFrame(centralwidget);
         MIT_AD->setObjectName("MIT_AD");
@@ -632,9 +611,9 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboardbig.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        DB1btn->setIcon(icon13);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboardbig.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        DB1btn->setIcon(icon7);
         DB1btn->setIconSize(QSize(110, 18));
         DB1btn->setCheckable(true);
         DB1btn->setAutoExclusive(true);
@@ -652,10 +631,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon14.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        pushButton_15->setIcon(icon14);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        pushButton_15->setIcon(icon8);
         pushButton_15->setIconSize(QSize(110, 18));
         pushButton_15->setCheckable(true);
         pushButton_15->setAutoExclusive(true);
@@ -673,10 +652,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon15;
-        icon15.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon15.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        pushButton_17->setIcon(icon15);
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        pushButton_17->setIcon(icon9);
         pushButton_17->setIconSize(QSize(115, 18));
         pushButton_17->setCheckable(true);
         pushButton_17->setAutoExclusive(true);
@@ -694,7 +673,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Serbtn1->setIcon(icon15);
+        Serbtn1->setIcon(icon9);
         Serbtn1->setIconSize(QSize(115, 18));
         Serbtn1->setCheckable(true);
         Serbtn1->setAutoExclusive(true);
@@ -712,7 +691,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        SerUsagebtn->setIcon(icon14);
+        SerUsagebtn->setIcon(icon8);
         SerUsagebtn->setIconSize(QSize(110, 18));
         SerUsagebtn->setCheckable(true);
         SerUsagebtn->setAutoExclusive(true);
@@ -730,7 +709,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        ReservationUsagebtn->setIcon(icon14);
+        ReservationUsagebtn->setIcon(icon8);
         ReservationUsagebtn->setIconSize(QSize(110, 18));
         ReservationUsagebtn->setCheckable(true);
         ReservationUsagebtn->setAutoExclusive(true);
@@ -748,7 +727,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Paymentbtn->setIcon(icon14);
+        Paymentbtn->setIcon(icon8);
         Paymentbtn->setIconSize(QSize(110, 18));
         Paymentbtn->setCheckable(true);
         Paymentbtn->setAutoExclusive(true);
@@ -766,7 +745,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Statisticsbtn->setIcon(icon14);
+        Statisticsbtn->setIcon(icon8);
         Statisticsbtn->setIconSize(QSize(110, 18));
         Statisticsbtn->setCheckable(true);
         Statisticsbtn->setAutoExclusive(true);
@@ -784,7 +763,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Contractbtn->setIcon(icon14);
+        Contractbtn->setIcon(icon8);
         Contractbtn->setIconSize(QSize(110, 18));
         Contractbtn->setCheckable(true);
         Contractbtn->setAutoExclusive(true);
@@ -802,7 +781,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Accountbtn->setIcon(icon14);
+        Accountbtn->setIcon(icon8);
         Accountbtn->setIconSize(QSize(110, 18));
         Accountbtn->setCheckable(true);
         Accountbtn->setAutoExclusive(true);
@@ -820,7 +799,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        RoomTypebtn->setIcon(icon14);
+        RoomTypebtn->setIcon(icon8);
         RoomTypebtn->setIconSize(QSize(110, 18));
         RoomTypebtn->setCheckable(true);
         RoomTypebtn->setAutoExclusive(true);
@@ -838,23 +817,21 @@ public:
         signoutbtn->setObjectName("signoutbtn");
         signoutbtn->setMinimumSize(QSize(0, 20));
         signoutbtn->setMaximumSize(QSize(16777215, 20));
-        QIcon icon16;
-        icon16.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon16.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        signoutbtn->setIcon(icon16);
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        signoutbtn->setIcon(icon10);
         signoutbtn->setIconSize(QSize(100, 60));
 
         verticalLayout_3->addWidget(signoutbtn);
 
 
-        horizontalLayout_54->addWidget(MIT_AD);
+        horizontalLayout->addWidget(MIT_AD);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
         frame_4 = new QFrame(centralwidget);
         frame_4->setObjectName("frame_4");
-        frame_4->setMinimumSize(QSize(727, 0));
-        frame_4->setMaximumSize(QSize(16777215, 16777215));
         frame_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "border:none;\n"
 "}\n"
@@ -869,10 +846,10 @@ public:
         pushButton_5 = new QPushButton(frame_4);
         pushButton_5->setObjectName("pushButton_5");
         pushButton_5->setMaximumSize(QSize(35, 35));
-        QIcon icon17;
-        icon17.addFile(QString::fromUtf8(":/new/prefix1/Resources/Left.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon17.addFile(QString::fromUtf8(":/new/prefix1/Resources/Right.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        pushButton_5->setIcon(icon17);
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/Left.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/Right.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        pushButton_5->setIcon(icon11);
         pushButton_5->setIconSize(QSize(40, 40));
         pushButton_5->setCheckable(true);
 
@@ -885,12 +862,8 @@ public:
 
         verticalLayout->addWidget(frame_4);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(0);
-        horizontalLayout->setObjectName("horizontalLayout");
         frame_3 = new QFrame(centralwidget);
         frame_3->setObjectName("frame_3");
-        frame_3->setMaximumSize(QSize(16777215, 16777215));
         frame_3->setStyleSheet(QString::fromUtf8("QFrame{\n"
 "border:none;\n"
 "}\n"
@@ -963,9 +936,9 @@ public:
         addroom->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        QIcon icon18;
-        icon18.addFile(QString::fromUtf8(":/new/prefix1/Resources/add.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        addroom->setIcon(icon18);
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/new/prefix1/Resources/add.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        addroom->setIcon(icon12);
         addroom->setIconSize(QSize(10, 10));
         addroom->setCheckable(false);
 
@@ -996,9 +969,9 @@ public:
 
         Refbtn = new QPushButton(page_2);
         Refbtn->setObjectName("Refbtn");
-        QIcon icon19;
-        icon19.addFile(QString::fromUtf8(":/new/prefix1/Resources/reload.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        Refbtn->setIcon(icon19);
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/new/prefix1/Resources/reload.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        Refbtn->setIcon(icon13);
 
         horizontalLayout_7->addWidget(Refbtn);
 
@@ -1138,7 +1111,7 @@ public:
 
         RefTenantbtn = new QPushButton(page_3);
         RefTenantbtn->setObjectName("RefTenantbtn");
-        RefTenantbtn->setIcon(icon19);
+        RefTenantbtn->setIcon(icon13);
 
         horizontalLayout_8->addWidget(RefTenantbtn);
 
@@ -1254,7 +1227,7 @@ public:
         addSer->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        addSer->setIcon(icon18);
+        addSer->setIcon(icon12);
         addSer->setIconSize(QSize(10, 10));
         addSer->setCheckable(false);
 
@@ -1281,7 +1254,7 @@ public:
 
         RefbtnSer = new QPushButton(page_4);
         RefbtnSer->setObjectName("RefbtnSer");
-        RefbtnSer->setIcon(icon19);
+        RefbtnSer->setIcon(icon13);
 
         horizontalLayout_22->addWidget(RefbtnSer);
 
@@ -1412,7 +1385,7 @@ public:
 
         RefbtnSer_3 = new QPushButton(page_5);
         RefbtnSer_3->setObjectName("RefbtnSer_3");
-        RefbtnSer_3->setIcon(icon19);
+        RefbtnSer_3->setIcon(icon13);
 
         horizontalLayout_28->addWidget(RefbtnSer_3);
 
@@ -1544,7 +1517,7 @@ public:
 
         RefRebtn = new QPushButton(page_6);
         RefRebtn->setObjectName("RefRebtn");
-        RefRebtn->setIcon(icon19);
+        RefRebtn->setIcon(icon13);
 
         horizontalLayout_16->addWidget(RefRebtn);
 
@@ -1705,16 +1678,16 @@ public:
 
         searchPayment = new QPushButton(page_7);
         searchPayment->setObjectName("searchPayment");
-        QIcon icon20;
-        icon20.addFile(QString::fromUtf8(":/new/prefix1/Resources/loupe.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        searchPayment->setIcon(icon20);
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/new/prefix1/Resources/loupe.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        searchPayment->setIcon(icon14);
         searchPayment->setCheckable(false);
 
         horizontalLayout_14->addWidget(searchPayment);
 
         RefPaymentbtn = new QPushButton(page_7);
         RefPaymentbtn->setObjectName("RefPaymentbtn");
-        RefPaymentbtn->setIcon(icon19);
+        RefPaymentbtn->setIcon(icon13);
 
         horizontalLayout_14->addWidget(RefPaymentbtn);
 
@@ -2112,14 +2085,14 @@ public:
 
         searchRer_3 = new QPushButton(page_9);
         searchRer_3->setObjectName("searchRer_3");
-        searchRer_3->setIcon(icon20);
+        searchRer_3->setIcon(icon14);
         searchRer_3->setCheckable(false);
 
         horizontalLayout_25->addWidget(searchRer_3);
 
         RefRebtn_3 = new QPushButton(page_9);
         RefRebtn_3->setObjectName("RefRebtn_3");
-        RefRebtn_3->setIcon(icon19);
+        RefRebtn_3->setIcon(icon13);
 
         horizontalLayout_25->addWidget(RefRebtn_3);
 
@@ -2253,7 +2226,7 @@ public:
         addroom_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        addroom_2->setIcon(icon18);
+        addroom_2->setIcon(icon12);
         addroom_2->setIconSize(QSize(10, 10));
         addroom_2->setCheckable(false);
 
@@ -2284,7 +2257,7 @@ public:
 
         Refbtn_2 = new QPushButton(page_10);
         Refbtn_2->setObjectName("Refbtn_2");
-        Refbtn_2->setIcon(icon19);
+        Refbtn_2->setIcon(icon13);
 
         horizontalLayout_20->addWidget(Refbtn_2);
 
@@ -2395,7 +2368,7 @@ public:
         addroom_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        addroom_3->setIcon(icon18);
+        addroom_3->setIcon(icon12);
         addroom_3->setIconSize(QSize(10, 10));
         addroom_3->setCheckable(false);
 
@@ -2421,7 +2394,7 @@ public:
 
         Refbtn_3 = new QPushButton(page_11);
         Refbtn_3->setObjectName("Refbtn_3");
-        Refbtn_3->setIcon(icon19);
+        Refbtn_3->setIcon(icon13);
 
         horizontalLayout_33->addWidget(Refbtn_3);
 
@@ -2488,21 +2461,12 @@ public:
         horizontalLayout_4->addWidget(stackedWidget);
 
 
-        horizontalLayout->addWidget(frame_3);
+        verticalLayout->addWidget(frame_3);
 
-        frame = new QFrame(centralwidget);
-        frame->setObjectName("frame");
-        frame->setMaximumSize(QSize(0, 16777215));
-        frame->setFrameShape(QFrame::Shape::StyledPanel);
-        frame->setFrameShadow(QFrame::Shadow::Raised);
+        verticalLayout->setStretch(0, 1);
+        verticalLayout->setStretch(1, 15);
 
-        horizontalLayout->addWidget(frame);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-
-        horizontalLayout_54->addLayout(verticalLayout);
+        horizontalLayout->addLayout(verticalLayout);
 
         Admin->setCentralWidget(centralwidget);
 

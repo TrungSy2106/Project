@@ -7729,15 +7729,7 @@ debug/Createpayment.o: ../../Createpayment.cpp ../../Createpayment.h \
 		../../../../../../Qt/6.8.0/mingw_64/include/QtCharts/qvxymodelmapper.h \
 		../../../../../../Qt/6.8.0/mingw_64/include/QtCharts/qxylegendmarker.h \
 		../../LinkedList.cpp \
-		../../RoomType.h \
-		../../Payment.h \
-		../../Date.h \
-		../../../../../../Qt/6.8.0/mingw_64/include/QtCore/QDate \
-		../../Contract.h \
-		../../Reservation.h \
-		../../Account.h \
-		../../ServiceUsage.h \
-		../../Service.h
+		../../RoomType.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Createpayment.o ..\..\Createpayment.cpp
 
 debug/Date.o: ../../Date.cpp ../../Date.h \
@@ -11905,14 +11897,7 @@ debug/Payment.o: ../../Payment.cpp ../../Payment.h \
 		../../../../../../Qt/6.8.0/mingw_64/include/QtCharts/qxylegendmarker.h \
 		../../Createpayment.h \
 		../../../../../../Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
-		../../LinkedList.cpp \
-		../../Contract.h \
-		../../Reservation.h \
-		../../Room.h \
-		../../RoomType.h \
-		../../Account.h \
-		../../ServiceUsage.h \
-		../../Service.h
+		../../LinkedList.cpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Payment.o ..\..\Payment.cpp
 
 debug/PaymentStatistics.o: ../../PaymentStatistics.cpp ../../PaymentStatistics.h \
@@ -12581,14 +12566,7 @@ debug/PaymentStatistics.o: ../../PaymentStatistics.cpp ../../PaymentStatistics.h
 		../../../../../../Qt/6.8.0/mingw_64/include/QtCharts/qxylegendmarker.h \
 		../../Createpayment.h \
 		../../../../../../Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
-		../../LinkedList.cpp \
-		../../Contract.h \
-		../../Reservation.h \
-		../../Room.h \
-		../../RoomType.h \
-		../../Account.h \
-		../../ServiceUsage.h \
-		../../Service.h
+		../../LinkedList.cpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\PaymentStatistics.o ..\..\PaymentStatistics.cpp
 
 debug/Reservation.o: ../../Reservation.cpp ../../Reservation.h \
@@ -15928,7 +15906,6 @@ debug/ServiceUsage.o: ../../ServiceUsage.cpp ../../ServiceUsage.h \
 		../../Createpayment.h \
 		../../../../../../Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
 		../../LinkedList.cpp \
-		../../Service.h \
 		../../Account.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ServiceUsage.o ..\..\ServiceUsage.cpp
 

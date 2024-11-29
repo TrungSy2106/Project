@@ -609,11 +609,11 @@ void Admin::manageroomtypes(){
     // ui->RoomTypeTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->RoomTypeTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
     ui->RoomTypeTable->horizontalHeaderItem(ui->RoomTypeTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->RoomTypeTable->setColumnWidth(0, 200);
-    ui->RoomTypeTable->setColumnWidth(1, 200);
-    ui->RoomTypeTable->setColumnWidth(2, 200);
-    ui->RoomTypeTable->setColumnWidth(3, 200);
-    ui->RoomTypeTable->setColumnWidth(4, 200);
+    ui->RoomTypeTable->setColumnWidth(0, 150);
+    ui->RoomTypeTable->setColumnWidth(1, 150);
+    ui->RoomTypeTable->setColumnWidth(2, 150);
+    ui->RoomTypeTable->setColumnWidth(3, 150);
+    ui->RoomTypeTable->setColumnWidth(4, 150);
     ui->RoomTypeTable->verticalHeader()->hide();
     ui->RoomTypeTable->setShowGrid(false);
 }
@@ -640,11 +640,11 @@ void Admin::manageservices(){
     // ui->SerTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->SerTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
     ui->SerTable->horizontalHeaderItem(ui->SerTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->SerTable->setColumnWidth(0, 200);
-    ui->SerTable->setColumnWidth(1, 200);
-    ui->SerTable->setColumnWidth(2, 200);
-    ui->SerTable->setColumnWidth(3, 200);
-    ui->SerTable->setColumnWidth(4, 200);
+    ui->SerTable->setColumnWidth(0, 150);
+    ui->SerTable->setColumnWidth(1, 150);
+    ui->SerTable->setColumnWidth(2, 150);
+    ui->SerTable->setColumnWidth(3, 150);
+    ui->SerTable->setColumnWidth(4, 150);
     ui->SerTable->verticalHeader()->hide();
     ui->SerTable->setShowGrid(false);
 }
@@ -654,13 +654,13 @@ void Admin::manageserviceusages(){
     ui->totalserviceUsage->setText(QString::number(Service::total));
     // ui->SerUsageTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->SerUsageTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    // ui->SerUsageTable->horizontalHeaderItem(ui->SerUsageTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->SerUsageTable->setColumnWidth(0, 200);
-    ui->SerUsageTable->setColumnWidth(1, 200);
-    ui->SerUsageTable->setColumnWidth(2, 200);
-    ui->SerUsageTable->setColumnWidth(3, 200);
-    ui->SerUsageTable->setColumnWidth(4, 200);
-    ui->SerUsageTable->setColumnWidth(5, 200);
+    ui->SerUsageTable->horizontalHeaderItem(ui->SerUsageTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
+    ui->SerUsageTable->setColumnWidth(0, 130);
+    ui->SerUsageTable->setColumnWidth(1, 130);
+    ui->SerUsageTable->setColumnWidth(2, 130);
+    ui->SerUsageTable->setColumnWidth(3, 130);
+    ui->SerUsageTable->setColumnWidth(4, 130);
+    ui->SerUsageTable->setColumnWidth(5, 130);
     ui->SerUsageTable->verticalHeader()->hide();
     ui->SerUsageTable->setShowGrid(false);
     // QRect headerRect = ui->SerUsageTable->visualRect(ui->SerUsageTable->model()->index(0, 0));
@@ -706,12 +706,12 @@ void Admin::manageaccounts(){
     ui->totalroom->setText(QString::number(Room::total));
     ui->AccountTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->AccountTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    // ui->AccountTable->horizontalHeaderItem(ui->AccountTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->AccountTable->setColumnWidth(0, 250);
-    ui->AccountTable->setColumnWidth(1, 250);
-    ui->AccountTable->setColumnWidth(2, 250);
-    ui->AccountTable->setColumnWidth(3, 250);
-    ui->AccountTable->setColumnWidth(4, 250);
+    ui->AccountTable->horizontalHeaderItem(ui->AccountTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
+    ui->AccountTable->setColumnWidth(0, 150);
+    ui->AccountTable->setColumnWidth(1, 150);
+    ui->AccountTable->setColumnWidth(2, 150);
+    ui->AccountTable->setColumnWidth(3, 150);
+    ui->AccountTable->setColumnWidth(4, 150);
     ui->AccountTable->verticalHeader()->hide();
 }
 
@@ -963,7 +963,7 @@ void Admin::displayContracts(const Contract& c){
     QWidget* buttonWidget = new QWidget();
 
     QPushButton* terminate_btn = new QPushButton();
-    terminate_btn->setIcon(QIcon(":/new/prefix1/Resources/rejectcontract.png"));
+    terminate_btn->setIcon(QIcon(":/new/prefix1/Resources/edit.png"));
     terminate_btn->setToolTip("Hủy thuê");
     connect(terminate_btn, &QPushButton::clicked, this, [this, row]() {
         // onterminate_btnClicked(row);
@@ -1024,14 +1024,14 @@ void Admin::displayReservations(const Reservation& re) {
         QWidget* buttonWidget = new QWidget();
 
         QPushButton* acceptbtn = new QPushButton();
-        acceptbtn->setIcon(QIcon(":/new/prefix1/Resources/accept.png"));
+        acceptbtn->setIcon(QIcon(":/new/prefix1/Resources/edit.png"));
         acceptbtn->setToolTip("Accept");
         connect(acceptbtn, &QPushButton::clicked, this, [this, row]() {
             onacceptbtnClicked(row);
         });
 
         QPushButton* rejectbtn = new QPushButton();
-        rejectbtn->setIcon(QIcon(":/new/prefix1/Resources/decline.png"));
+        rejectbtn->setIcon(QIcon(":/new/prefix1/Resources/delete.png"));
         rejectbtn->setToolTip("Reject");
         connect(rejectbtn, &QPushButton::clicked, this, [this, row]() {
             onrejectbtnClicked(row);
