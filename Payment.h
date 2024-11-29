@@ -4,6 +4,9 @@
 #include <string>
 #include "Date.h"
 #include "LinkedList.h"
+#include "Contract.h"
+#include "ServiceUsage.h"
+#include "Createpayment.h"
 
 using namespace std;
 
@@ -12,7 +15,7 @@ private:
     string paymentID,roomID,tenantID;
     double rentAmount, serviceAmount, totalAmount;
     DATE payDate;
-    int payMonth, payYear;
+    int billMonth, billYear;
     bool status; // 0: pending, 1: paid
     double depositAmount;
 public:
@@ -39,12 +42,14 @@ public:
     int getPayYear() const;
     bool getStatus() const;
     double getdepositAmount() const;
+    int getBillMonth () const;
+    int getBillYear() const;
 
     void fromString(const string& line);
     string toString() const;
 
-    static void autocreatePayment();
-
+    static bool createPayment(int billMonth, int billYear, Createpayment* adminWindow);
+    static void autocreatePayment(int billMonth, int billYear);
     friend ostream& operator<<(ostream& os, const Payment& p);
 
     static void load(const string& filename);
@@ -53,6 +58,7 @@ public:
     static void showAllPayments(Admin* adminWindow);
 
     static void searchByMonth(int month, int year, Admin* adminWindow);
+    static double calculateProRatedRent(double fullRentAmount, int startDay, int billMonth, int billYear);
 
     void makePayment();
     double getRemainingAmount() const { return totalAmount - depositAmount; }
@@ -65,6 +71,8 @@ public:
     // Tính toán doanh thu
     static double calculateTotalBilled(int month, int year);
     static double calculateTotalCollected(int month, int year);
+    static bool isValidPaymentDate(const DATE& paymentDate, const Contract& contract);
+    static bool isPaymentExist(const string& roomID, const string& tenantID, int billMonth, int billYear);
 
     // Hiển thị so sánh
     static void showMonthlyComparison(int year);

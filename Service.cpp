@@ -16,6 +16,7 @@ Service::~Service() {}
 
 string Service::getID() const { return service_ID; }
 string Service::getName() const { return name; }
+double Service::getUnitPrice() const { return unit_price; }
 
 string Service::generateID(int number) {
     stringstream ss;

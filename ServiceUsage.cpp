@@ -26,6 +26,9 @@ string ServiceUsage::getTenantID() const { return tenantID; }
 string ServiceUsage::getServiceID() const { return service_ID; }
 bool ServiceUsage::getStatus() const { return status; }
 void ServiceUsage::setStatus(bool newStatus) { status = newStatus; }
+void ServiceUsage::setQuantity(int qty) { quantity = qty; }
+int ServiceUsage::getQuantity() const {return quantity;}
+
 
 void ServiceUsage::load(const string& filename) { usageList.load(filename); }
 void ServiceUsage::updateFile(const string& filename) { usageList.updateFile(filename); }
@@ -35,8 +38,10 @@ void ServiceUsage::fromString(const string& line) {
     stringstream ss(line);
     getline(ss, usage_ID, ',');
     getline(ss, room_ID, ',');
-    getline(ss, service_ID, ',');
     getline(ss, tenantID, ',');
+    getline(ss, service_ID, ',');
+    ss >> quantity;
+    ss.ignore(1);
     ss >> status;
     total++;
 }
@@ -44,8 +49,8 @@ void ServiceUsage::fromString(const string& line) {
 
 string ServiceUsage::toString() const {
     stringstream ss;
-    ss << usage_ID << ',' << room_ID << ',' << service_ID << ','
-       << tenantID << ',' << status;
+    ss << usage_ID << ',' << room_ID << ',' << tenantID << ','
+       << service_ID << ',' << quantity << ',' << status;
     return ss.str();
 }
 
@@ -100,4 +105,40 @@ void ServiceUsage::searchByRoomID(const string& rid, Admin* adminWindow) {
 
 void ServiceUsage::sortID(bool sx){
     usageList.sortByID(sx);
+}
+
+double ServiceUsage::calculateServiceAmountForRoom(const string& roomID, const string& tenantID) {
+    double serviceAmount = 0;
+    for (LinkedList<ServiceUsage>::Node* current = usageList.begin(); current != nullptr; current = current->next) {        
+        ServiceUsage& usage = current->data;
+        qDebug() << usage.getRoomID();
+        qDebug() << usage.getTenantID();
+        if (roomID == usage.getRoomID() && tenantID == usage.getTenantID()) {
+            Service* service = Service::serviceList.searchID(usage.getServiceID());
+            if (service != nullptr) {
+                if (service->getID() == "S.005" || service->getID() == "S.006") {
+                    int quantity = usage.getQuantity();
+                    qDebug() << quantity;
+                    serviceAmount += service->getUnitPrice() * quantity;
+                } else {
+                    serviceAmount += service->getUnitPrice();
+                }
+            }
+        }
+    }
+    return serviceAmount;
+}
+
+void ServiceUsage::enterquantity(const string& roomID, int e, int w){
+    for (LinkedList<ServiceUsage>::Node* current = usageList.begin(); current != nullptr; current = current->next){
+        ServiceUsage& usage = current->data;
+        if (usage.getRoomID() == roomID){
+            if (usage.getServiceID() == "S.005"){
+                usage.quantity = e;
+            }
+            if (usage.getServiceID() == "S.006"){
+                usage.quantity = w;
+            }
+        }
+    }
 }

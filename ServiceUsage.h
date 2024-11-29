@@ -3,6 +3,7 @@
 
 #include "LinkedList.h"
 #include "admin.h"
+#include "Service.h"
 #include <string>
 
 using namespace std;
@@ -10,6 +11,7 @@ using namespace std;
 class ServiceUsage {
     string usage_ID, room_ID, service_ID, tenantID;
     bool status;
+    int quantity;
 public:
     friend class Admin;
     static int total;
@@ -32,8 +34,8 @@ public:
     string getTenantID() const;
     string getServiceID() const;
     bool getStatus() const;
+    int getQuantity() const;
     void setStatus(bool newStatus);
-
     void display(Admin* adminWindow) const;
 
     void fromString(const string& line);
@@ -45,6 +47,8 @@ public:
     static void updateServiceUsage();
     static void deleteServiceUsage();
     static void showAllServiceUsages(Admin* adminWindow);
+    static double calculateServiceAmountForRoom(const string& roomID, const string& tenantID);
+    static void  enterquantity(const string& roomID, int e, int w);
 
     static void searchByID(const string& id, Admin* adminWindow);
     static void searchByRoomID(const string& rid, Admin* adminWindow);

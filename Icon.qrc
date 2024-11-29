@@ -52,5 +52,20 @@
         <file>Resources/reload.png</file>
         <file>Resources/sx.png</file>
         <file>Resources/Personb1.png</file>
+        <file>Resources/Account.png</file>
+        <file>Resources/payment.png</file>
+        <file>Resources/roomtype.png</file>
+        <file>Resources/Statistics.png</file>
+        <file>Resources/Statistics1.png</file>
+        <file>Resources/Account1.png</file>
+        <file>Resources/booking1.png</file>
+        <file>Resources/contract1.png</file>
+        <file>Resources/roomtype1.png</file>
+        <file>Resources/Service1.png</file>
+        <file>Resources/serviceusage1.png</file>
+        <file>Resources/payment1.png</file>
+        <file>Resources/accept.png</file>
+        <file>Resources/decline.png</file>
+        <file>Resources/rejectcontract.png</file>
     </qresource>
 </RCC>
