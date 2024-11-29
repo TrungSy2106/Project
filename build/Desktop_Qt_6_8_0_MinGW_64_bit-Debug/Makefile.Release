@@ -207,65 +207,48 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_Icon.cpp
 release/qrc_Icon.cpp: ../../Icon.qrc \
 		../../../../Qt/6.8.0/mingw_64/bin/rcc.exe \
-		../../Resources/roomtype1.png \
+		../../Resources/dashboard\ (1).png \
+		../../Resources/Person1.png \
+		../../Resources/delete.png \
 		../../Resources/sx.png \
+		../../Resources/house_icon_with_green_background.png \
 		../../Resources/Room1\ 20%.png \
+		../../Resources/logo78x79.png \
 		../../Resources/signout2.png \
+		../../Resources/Untitled\ copy.jpg \
+		../../Resources/Roomb2.png \
 		../../Resources/Untitled.png \
 		../../Resources/customer-service.png \
-		../../Resources/decline.png \
-		../../Resources/serviceusage1.png \
+		../../Resources/Person.png \
+		../../Resources/dashboardbig.png \
+		../../Resources/Roomb1.png \
+		../../Resources/Room1.png \
 		../../Resources/signoutsmall1.png \
-		../../Resources/Statistics.png \
+		../../Resources/flash.png \
 		../../Resources/dashboard.png \
+		../../Resources/Bedroom.png \
 		../../Resources/contract.png \
 		../../Resources/images.png \
-		../../Resources/payment.png \
-		../../Resources/Account.png \
+		../../Resources/Maintenance.png \
+		../../Resources/Personb1.png \
+		../../Resources/wi-fi.png \
 		../../Resources/reload.png \
 		../../Resources/bed.png \
 		../../Resources/financessmall1.png \
 		../../Resources/logo.png \
 		../../Resources/Personb2.png \
-		../../Resources/Account1.png \
+		../../Resources/add.png \
+		../../Resources/dashboardbig1.png \
 		../../Resources/Left.png \
 		../../Resources/loupe.png \
+		../../Resources/menu.png \
 		../../Resources/Right.png \
+		../../Resources/Screenshot\ 2024-10-27\ 212338.png \
 		../../Resources/edit.png \
 		../../Resources/dashboard1.png \
 		../../Resources/Room.png \
-		../../Resources/Statistics1.png \
-		../../Resources/booking.png \
-		../../Resources/Service1.png \
-		../../Resources/logoooo.png \
-		../../Resources/signout1.png \
-		../../Resources/dashboard\ (1).png \
-		../../Resources/Person1.png \
-		../../Resources/delete.png \
-		../../Resources/house_icon_with_green_background.png \
-		../../Resources/logo78x79.png \
-		../../Resources/contract1.png \
-		../../Resources/Untitled\ copy.jpg \
-		../../Resources/Roomb2.png \
-		../../Resources/Person.png \
-		../../Resources/dashboardbig.png \
-		../../Resources/Roomb1.png \
-		../../Resources/payment1.png \
-		../../Resources/Room1.png \
-		../../Resources/booking1.png \
-		../../Resources/roomtype.png \
-		../../Resources/flash.png \
-		../../Resources/Bedroom.png \
-		../../Resources/Maintenance.png \
-		../../Resources/Personb1.png \
-		../../Resources/wi-fi.png \
-		../../Resources/add.png \
-		../../Resources/rejectcontract.png \
-		../../Resources/dashboardbig1.png \
-		../../Resources/menu.png \
-		../../Resources/accept.png \
-		../../Resources/Screenshot\ 2024-10-27\ 212338.png \
 		../../Resources/logoooonew.png \
+		../../Resources/booking.png \
 		../../Resources/signoutsmall2.png \
 		../../Resources/Untitled.jpg \
 		../../Resources/drop.png \
@@ -273,6 +256,8 @@ release/qrc_Icon.cpp: ../../Icon.qrc \
 		../../Resources/Service.png \
 		../../Resources/sxgiam.png \
 		../../Resources/sxtang.png \
+		../../Resources/logoooo.png \
+		../../Resources/signout1.png \
 		../../Resources/responsible.png
 	E:\Qt\6.8.0\mingw_64\bin\rcc.exe -name Icon --no-zstd ..\..\Icon.qrc -o release\qrc_Icon.cpp
 
