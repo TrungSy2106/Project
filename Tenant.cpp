@@ -106,7 +106,7 @@ void Tenant::updateTenant(const string& tenantId, const string& lastname, const 
 //         adminWindow->displayTenant(*tenant);
 //     else return;
 // }
-bool Tenant::searchByID(const string& id, Admin* adminWindow) {
+void Tenant::searchByID(const string& id, Admin* adminWindow) {
     bool found = false;
     LinkedList<Tenant>::Node* current = tenantList.begin();
     while (current != nullptr) {
@@ -117,7 +117,9 @@ bool Tenant::searchByID(const string& id, Admin* adminWindow) {
         }
         current = current->next;
     }
-    return found;
+    if (!found) {
+        return;
+    }
 }
 
 // void Tenant::searchByName(const string& name, Admin* adminWindow){
@@ -139,4 +141,20 @@ void Tenant::searchByName(const string& name, Admin* adminWindow) {
     if (!found) {
         return;
     }
+}
+
+void Tenant::searchByGender(int gender, Admin* adminWindow) {
+    LinkedList<Tenant>::Node* current = tenantList.begin();
+    while (current != nullptr) {
+        if (current->data.getGender() == gender) { current->data.display(adminWindow); }
+        current = current->next;
+    }
+}
+
+void Tenant::sortID(bool sx){
+    tenantList.sortByID(sx);
+}
+
+void Tenant::sortName(bool sx){
+    tenantList.sortByAlphabet(sx);
 }

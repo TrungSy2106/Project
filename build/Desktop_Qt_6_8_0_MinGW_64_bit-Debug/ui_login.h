@@ -69,9 +69,9 @@ public:
         Signupbtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         label = new QLabel(page);
         label->setObjectName("label");
-        label->setGeometry(QRect(80, 60, 241, 91));
+        label->setGeometry(QRect(50, 50, 291, 111));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("Stencil")});
+        font1.setFamilies({QString::fromUtf8("Arial")});
         font1.setPointSize(40);
         label->setFont(font1);
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -132,7 +132,7 @@ public:
 
         retranslateUi(Login);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Login);
@@ -143,7 +143,7 @@ public:
         Login->setWindowTitle(QCoreApplication::translate("Login", "MainWindow", nullptr));
         Signinbtn->setText(QCoreApplication::translate("Login", "Sign in", nullptr));
         Signupbtn->setText(QCoreApplication::translate("Login", "Sign up", nullptr));
-        label->setText(QCoreApplication::translate("Login", "Welcome", nullptr));
+        label->setText(QCoreApplication::translate("Login", "WELCOME", nullptr));
         label_2->setText(QCoreApplication::translate("Login", "Sign In", nullptr));
         SigninBackButton->setText(QCoreApplication::translate("Login", "< Back", nullptr));
         UserName->setPlaceholderText(QCoreApplication::translate("Login", " Username ", nullptr));

@@ -270,7 +270,10 @@ Makefile: ../../Pbl.pro ../../../../Qt/6.8.0/mingw_64/mkspecs/win32-g++/qmake.co
 		../../../../Qt/6.8.0/mingw_64/mkspecs/features/yacc.prf \
 		../../../../Qt/6.8.0/mingw_64/mkspecs/features/lex.prf \
 		../../Pbl.pro \
+		../../../../Qt/6.8.0/mingw_64/lib/Qt6Charts.prl \
+		../../../../Qt/6.8.0/mingw_64/lib/Qt6OpenGLWidgets.prl \
 		../../../../Qt/6.8.0/mingw_64/lib/Qt6Widgets.prl \
+		../../../../Qt/6.8.0/mingw_64/lib/Qt6OpenGL.prl \
 		../../../../Qt/6.8.0/mingw_64/lib/Qt6Gui.prl \
 		../../../../Qt/6.8.0/mingw_64/lib/Qt6Core.prl \
 		../../../../Qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl \
@@ -477,7 +480,10 @@ Makefile: ../../Pbl.pro ../../../../Qt/6.8.0/mingw_64/mkspecs/win32-g++/qmake.co
 ../../../../Qt/6.8.0/mingw_64/mkspecs/features/yacc.prf:
 ../../../../Qt/6.8.0/mingw_64/mkspecs/features/lex.prf:
 ../../Pbl.pro:
+../../../../Qt/6.8.0/mingw_64/lib/Qt6Charts.prl:
+../../../../Qt/6.8.0/mingw_64/lib/Qt6OpenGLWidgets.prl:
 ../../../../Qt/6.8.0/mingw_64/lib/Qt6Widgets.prl:
+../../../../Qt/6.8.0/mingw_64/lib/Qt6OpenGL.prl:
 ../../../../Qt/6.8.0/mingw_64/lib/Qt6Gui.prl:
 ../../../../Qt/6.8.0/mingw_64/lib/Qt6Core.prl:
 ../../../../Qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl:

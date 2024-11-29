@@ -151,25 +151,25 @@ void LinkedList<T>::sortByID(bool ascending) {
         }
     } while (swapped);
 }
-// template <typename T>
-// void LinkedList<T>::sortByAlphabet(bool ascending) {
-//     if (head == nullptr) return;
-//     bool swapped;
-//     do {
-//         swapped = false;
-//         Node* current = head;
-//         while (current->next) {
-//             string name1 = current->data.getName();
-//             string name2 = current->next->data.getName();
-//             bool shouldSwap = ascending ? (name1 > name2) : (name1 < name2);
-//             if (shouldSwap) {
-//                 swap(current->data, current->next->data);
-//                 swapped = true;
-//             }
-//             current = current->next;
-//         }
-//     } while (swapped);
-// }
+template <typename T>
+void LinkedList<T>::sortByAlphabet(bool ascending) {
+    if (head == nullptr) return;
+    bool swapped;
+    do {
+        swapped = false;
+        Node* current = head;
+        while (current->next) {
+            string name1 = current->data.getFirstName();
+            string name2 = current->next->data.getFirstName();
+            bool shouldSwap = ascending ? (name1 > name2) : (name1 < name2);
+            if (shouldSwap) {
+                swap(current->data, current->next->data);
+                swapped = true;
+            }
+            current = current->next;
+        }
+    } while (swapped);
+}
 // //Search
 template <typename T>
 T* LinkedList<T>::searchID(const string& ID) const{
@@ -188,6 +188,17 @@ void LinkedList<T>::searchStatus(const int& status, Admin* adminWindow) {
     while (current) {
         if (current->data.getStatus() == status) {
             current->data.display(adminWindow);
+        }
+        current = current->next;
+    }
+}
+
+template <typename T>
+void LinkedList<T>::searchStatus(const int& status, Createpayment* adminWindow) {
+    Node* current = head;
+    while (current) {
+        if (current->data.getStatus() == status) {
+            current->data.displayuser(adminWindow);
         }
         current = current->next;
     }
@@ -228,19 +239,19 @@ void LinkedList<T>::searchRoomType(const string& RT, Admin* adminWindow) {
 //         }
 //     } while (choice != 0);
 // }
-// template <typename T>
-// const T& LinkedList<T>::operator[](int index) const {
-//     Node* current = head; // Assuming LinkedList has a head pointer
-//     int currentIndex = 0;
-//     while (current != nullptr) {
-//         if (currentIndex == index) {
-//             return current->data;
-//         }
-//         current = current->next;
-//         currentIndex++;
-//     }
-//     return T();
-// }
+template <typename T>
+const T& LinkedList<T>::operator[](int index) const {
+    Node* current = head; // Assuming LinkedList has a head pointer
+    int currentIndex = 0;
+    while (current != nullptr) {
+        if (currentIndex == index) {
+            return current->data;
+        }
+        current = current->next;
+        currentIndex++;
+    }
+    return T();
+}
 // template <typename T>
 // T& LinkedList<T>::operator[](int index) {
 //     Node* current = head; // Assuming LinkedList has a head pointer

@@ -3,6 +3,7 @@
 #include <string>
 #include <QFile>
 #include "admin.h"
+#include "Createpayment.h"
 using namespace std;
 
 template <typename T>
@@ -32,14 +33,14 @@ public:
     Node* getHead();
     T* searchID(const string& ID) const;
     void searchStatus(const int& status, Admin* adminWindow);
+    void searchStatus(const int& status, Createpayment* adminWindow);
     void searchRoomType(const string& RT, Admin* adminWindow);
     // void searchAll(LinkedList<T>& list);
     void show(Admin* adminWindow) const;
     void sortByID(bool ascending = true);
-    // void sortByAlphabet(bool ascending = true);
+    void sortByAlphabet(bool ascending = true);
 
-    // const T& operator[](int index) const;
-    // T& operator[](int index);
+    const T& operator[](int index) const;
 };
 
 #include "LinkedList.cpp"

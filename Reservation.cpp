@@ -81,12 +81,26 @@ void Reservation::display(Admin* adminWindow) const {
 }
 
 void Reservation::searchByID(const string& id, Admin* adminWindow) {
-    Reservation* reservation=reservationList.searchID(id);
-    if (reservation)
-        adminWindow->displayReservations(*reservation);
-    else return;
+    bool found = false;
+    LinkedList<Reservation>::Node* current = reservationList.begin();
+    while (current != nullptr) {
+        string ID = current->data.getID();
+        if ( ID.find(id) != string::npos) {
+            current->data.display(adminWindow);
+            found = true;
+        }
+        current = current->next;
+    }
+    if (!found) {
+        return;
+    }
 }
 
+void Reservation::searchByStatus(int status, Admin* adminWindow) {
+    reservationList.searchStatus(status, adminWindow);
+}
 
-
+void Reservation::sortID(bool sx){
+    reservationList.sortByID(sx);
+}
 

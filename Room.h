@@ -33,6 +33,7 @@ public:
     string getTenantID() const;
 
     void display(Admin* adminWindow) const;
+    void displayuser(Createpayment* adminWindow) const;
     void fromString(const string& line);
     string toString() const;
     static int total;
@@ -42,9 +43,11 @@ public:
 
     static void updateRoom(const string& rid, int sta, const string& rt);
     static void updateFile(const string& filename);
-    static bool searchByID(const string& id, Admin* adminWindow);
+    static void searchByID(const string& id, Admin* adminWindow);
+    static void searchByID(const string& id, Createpayment* adminWindow);
     static void searchByStatus(int st, Admin* adminWindow);
     static void searchByRoomType(const string& RT, Admin* adminWindow);
+    static void searchByName(const string& name, Admin* adminWindow);
     static void load();
     static void deleteRoom(const string& rid);
     static void addRoom(const string& rt_id);

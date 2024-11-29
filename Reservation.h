@@ -70,9 +70,10 @@ public:
 
     // Search and confirm reservation
     static void searchByID(const string& id, Admin* adminWindow);
+    static void searchByStatus(int status, Admin* adminWindow);
     static void searchAll();
+    static void sortID(bool sx);
     void display(Admin* adminWindow) const;
-
 };
 
 #endif // RESERVATION_H

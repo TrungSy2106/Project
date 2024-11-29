@@ -62,6 +62,7 @@ public:
     static Contract* searchByRidAndTid(const string& rid, const string& tid);
     static void searchByTenantID(const string& id);
     static void confirmReservationandcreatContract(int choice, const string& tempRE);
+    static void sortID(bool sx);
     void display(Admin* adminWindow) const;
 };
 

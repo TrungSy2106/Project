@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,14 +12,18 @@ SOURCES += \
     Account.cpp \
     AddService.cpp \
     Addroom.cpp \
+    Addroomtype.cpp \
     Contract.cpp \
+    Createpayment.cpp \
     Date.cpp \
     Editroom.cpp \
+    Editroomtype.cpp \
     Editservice.cpp \
     Edittenant.cpp \
     LinkedList.cpp \
     Login.cpp \
     Payment.cpp \
+    PaymentStatistics.cpp \
     Reservation.cpp \
     Room.cpp \
     RoomType.cpp \
@@ -34,14 +38,18 @@ HEADERS += \
     Account.h \
     AddService.h \
     Addroom.h \
+    Addroomtype.h \
     Contract.h \
+    Createpayment.h \
     Date.h \
     Editroom.h \
+    Editroomtype.h \
     Editservice.h \
     Edittenant.h \
     LinkedList.h \
     Login.h \
     Payment.h \
+    PaymentStatistics.h \
     Reservation.h \
     Room.h \
     RoomType.h \
@@ -54,7 +62,10 @@ HEADERS += \
 FORMS += \
     AddService.ui \
     Addroom.ui \
+    Addroomtype.ui \
+    Createpayment.ui \
     Editroom.ui \
+    Editroomtype.ui \
     Editservice.ui \
     Edittenant.ui \
     Login.ui \

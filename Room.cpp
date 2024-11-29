@@ -1,8 +1,11 @@
 #include "Room.h"
 #include "LinkedList.h"
+#include "Tenant.h"
 #include <iostream>
 #include <ostream>
-#include <admin.h>
+// #include <admin.h>
+
+using namespace std;
 
 LinkedList<Room> Room::roomList;
 int Room::total = 0;
@@ -84,6 +87,10 @@ void Room::display(Admin* adminWindow) const {
     adminWindow->displayRooms(*this);  // Gọi hàm displayRoom của Admin với Room hiện tại
 }
 
+void Room::displayuser(Createpayment* adminWindow) const {
+    adminWindow->displayRooms(*this);  // Gọi hàm displayRoom của Admin với Room hiện tại
+}
+
 void Room::updateRoom(const string& rid, int sta, const string& rt){
     Room* room = roomList.searchID(rid);
     room->setStatus(sta);
@@ -98,7 +105,7 @@ void Room::deleteRoom(const string& rid) {
     Room::updateFile("Room.txt");
 }
 
-bool Room::searchByID(const string& id, Admin* adminWindow) {
+void Room::searchByID(const string& id, Admin* adminWindow) {
     bool found = false;
     LinkedList<Room>::Node* current = roomList.begin();
     while (current != nullptr) {
@@ -109,7 +116,25 @@ bool Room::searchByID(const string& id, Admin* adminWindow) {
         }
         current = current->next;
     }
-    return found;
+    if (!found) {
+        return;
+    }
+}
+
+void Room::searchByID(const string& id, Createpayment* adminWindow) {
+    bool found = false;
+    LinkedList<Room>::Node* current = roomList.begin();
+    while (current != nullptr) {
+        string ID = current->data.getID();
+        if ( ID.find(id) != string::npos) {
+            current->data.displayuser(adminWindow);
+            found = true;
+        }
+        current = current->next;
+    }
+    if (!found) {
+        return;
+    }
 }
 // void Room::searchByID(const string& id, Admin* adminWindow) {
 //     Room* room = roomList.searchID(id);
@@ -133,6 +158,28 @@ void Room::searchByRoomType(const string& RT, Admin* adminWindow){
         if ( ID.find(RT) != string::npos) {
             current->data.display(adminWindow);
             found = true;
+        }
+        current = current->next;
+    }
+
+    if (!found) {
+        return;
+    }
+}
+
+void Room::searchByName(const string& name, Admin* adminWindow) {
+    bool found = false;
+    LinkedList<Room>::Node* current = roomList.begin();
+
+    while (current != nullptr) {
+        if (current->data.getTenantID() != "N/A") {
+            Tenant* tenant = Tenant::tenantList.searchID(current->data.getTenantID());
+            if (tenant != nullptr) {
+                if (tenant->getFirstName().find(name) != string::npos || tenant->getLastName().find(name) != string::npos || tenant->getFullName().find(name) != string::npos) {
+                    current->data.display(adminWindow);
+                    found = true;
+                }
+            }
         }
         current = current->next;
     }

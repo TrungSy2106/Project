@@ -3,17 +3,17 @@
 int Account::total = 0;
 int Account::currentNumber = 0;
 string Account::currentTenantID = "None";
-int Account::currentRoll = 0;
+int Account::currentRole = 0;
 string Account::AdminCode = "000";
 LinkedList<Account> Account::accountList;
 
 Account::Account() {}
 Account::~Account() {}
 
-string Account::getusername() { return username; }
-string Account::getpassword() { return password; }
-string Account::gettenantID() { return tenant_ID; }
-int Account::getRoll() { return roll; };
+string Account::getusername() const { return username; }
+string Account::getpassword() const { return password; }
+string Account::gettenantID() const { return tenant_ID; }
+int Account::getrole() const { return role; };
 
 void Account::fromString(const string& line) {
     string rollstr;
@@ -23,7 +23,7 @@ void Account::fromString(const string& line) {
     getline(ss, password, ',');
     getline(ss, tenant_ID, ',');
     getline(ss, rollstr);
-    roll = stoi(rollstr);
+    role = stoi(rollstr);
     total++;
 }
 
@@ -32,7 +32,7 @@ bool Account::signin(const string& u, const string& p) {
         account = searchByUsername(u, 0);
         if (account != NULL && account->data.password == p) {
             currentTenantID = account->data.gettenantID();
-            currentRoll = account->data.getRoll();
+            currentRole = account->data.getrole();
             return true;
         }
         return false;
@@ -65,4 +65,12 @@ void Account::load(const string& filename) {
     }
     file.close();
     accountList.load(filename);
+}
+
+void Account::showAllAccount(Admin* adminWindow){
+    accountList.show(adminWindow);
+}
+
+void Account::display(Admin* adminWindow) const {
+    adminWindow->displayAccounts(*this);
 }

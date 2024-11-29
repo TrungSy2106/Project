@@ -21,7 +21,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <widget class="QPushButton" name="Signinbtn">
@@ -71,20 +71,20 @@
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>60</y>
-          <width>241</width>
-          <height>91</height>
+          <x>50</x>
+          <y>50</y>
+          <width>291</width>
+          <height>111</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Stencil</family>
+          <family>Arial</family>
           <pointsize>40</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>Welcome</string>
+         <string>WELCOME</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignmentFlag::AlignCenter</set>

@@ -45,8 +45,11 @@ public:
 
     void display(Admin* adminWindow) const;
 
+    static void sortID(bool sx);
+    static void sortName(bool sx);
     static void showAllTenants(Admin* adminWindow);
-    static bool searchByID(const string& id, Admin* adminWindow);
+    static void searchByGender(int gender, Admin* adminWindow);
+    static void searchByID(const string& id, Admin* adminWindow);
     static void searchByName(const string& name, Admin* adminWindow);
     static void load(const string& filename);
     static void updateFile(const string& filename);

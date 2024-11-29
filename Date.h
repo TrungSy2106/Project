@@ -41,6 +41,13 @@ public:
     int toDays();
 
     DATE addMonths(int months) const;
+
+    bool operator<(const DATE& other) const;
+    bool operator>(const DATE& other) const;
+    bool operator<=(const DATE& other) const;
+    bool operator>=(const DATE& other) const;
+    bool operator==(const DATE& other) const;
+    bool operator!=(const DATE& other) const;
 };
 
 #endif // DATE_H

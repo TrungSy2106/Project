@@ -114,3 +114,7 @@ void Contract::showAllContracts(Admin* adminWindow) {
 void Contract::display(Admin* adminWindow) const {
     adminWindow->displayContracts(*this);
 }
+
+void Contract::sortID(bool sx){
+    contractList.sortByID(sx);
+}

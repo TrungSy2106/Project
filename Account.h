@@ -11,12 +11,12 @@ private:
     string username;
     string password;
     string tenant_ID;
-    int roll; // 0: Khach, 1: Admin
+    int role; // 0: Khach, 1: Admin
 public:
     static string currentTenantID;
     static int total;          // Tổng số phòng
     static int currentNumber;  // Số lượng phòng hiện tại
-    static int currentRoll;
+    static int currentRole;
     static string AdminCode;
     static LinkedList<Account> accountList;
 
@@ -26,10 +26,11 @@ public:
     ~Account();
 
     // Ham Get
-    string getusername();
-    string getpassword();
-    string gettenantID();
-    int getRoll();
+    string getID() const { return account_ID; }
+    string getusername() const;
+    string getpassword() const;
+    string gettenantID() const;
+    int getrole() const;
 
     // Ham Set
     void setusername(string u);
@@ -55,10 +56,11 @@ public:
     static LinkedList<Account>::Node* searchByUsername(string u, int check);
     static LinkedList<Account>::Node* searchByPassword(string p);
 
-    static void showAllAccount();
+    static void showAllAccount(Admin* adminWindow);
 
     static bool forgotPassword();
     static LinkedList<Account>::Node* verifyTenantInfo(const string& phone, const string& cccd);
+    void display(Admin* adminWindow) const;
 };
 
 #endif // ACCOUNT_H

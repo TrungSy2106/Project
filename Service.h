@@ -2,7 +2,6 @@
 #define SERVICE_H
 
 #include <string>
-#include <sstream>
 #include "LinkedList.h"
 #include "admin.h"
 
@@ -28,6 +27,7 @@ public:
     void fromString(const string& line);
     string getID() const;
     string getName() const;
+    double getUnitPrice() const;
 
     static string generateID(int number);
     string toString() const;
@@ -41,6 +41,7 @@ public:
     static void showAllServices(Admin* adminWindow);
     static bool searchByID(const string& id, Admin* adminWindow);
     static void searchByName(const string& name, Admin* adminWindow);
+    static void sortID(bool sx);
 };
 
 #endif // SERVICE_H
