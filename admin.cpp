@@ -40,7 +40,7 @@ Admin::Admin(QWidget *parent)
     managecontracts();
     manageaccounts();
     manageroomtypes();
-    managesta();
+    drawchartMonths(2024);
     ui->stackedWidget_2->setCurrentIndex(1);
     QAction *searchAction = new QAction(QIcon(":/new/prefix1/Resources/loupe.png"), "Search", this);
     ui->LineEditSearchRoom->addAction(searchAction, QLineEdit::LeadingPosition);
@@ -609,11 +609,11 @@ void Admin::manageroomtypes(){
     // ui->RoomTypeTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->RoomTypeTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
     ui->RoomTypeTable->horizontalHeaderItem(ui->RoomTypeTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->RoomTypeTable->setColumnWidth(0, 200);
-    ui->RoomTypeTable->setColumnWidth(1, 200);
-    ui->RoomTypeTable->setColumnWidth(2, 200);
-    ui->RoomTypeTable->setColumnWidth(3, 200);
-    ui->RoomTypeTable->setColumnWidth(4, 200);
+    ui->RoomTypeTable->setColumnWidth(0, 150);
+    ui->RoomTypeTable->setColumnWidth(1, 150);
+    ui->RoomTypeTable->setColumnWidth(2, 150);
+    ui->RoomTypeTable->setColumnWidth(3, 150);
+    ui->RoomTypeTable->setColumnWidth(4, 150);
     ui->RoomTypeTable->verticalHeader()->hide();
     ui->RoomTypeTable->setShowGrid(false);
 }
@@ -640,11 +640,11 @@ void Admin::manageservices(){
     // ui->SerTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->SerTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
     ui->SerTable->horizontalHeaderItem(ui->SerTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->SerTable->setColumnWidth(0, 200);
-    ui->SerTable->setColumnWidth(1, 200);
-    ui->SerTable->setColumnWidth(2, 200);
-    ui->SerTable->setColumnWidth(3, 200);
-    ui->SerTable->setColumnWidth(4, 200);
+    ui->SerTable->setColumnWidth(0, 150);
+    ui->SerTable->setColumnWidth(1, 150);
+    ui->SerTable->setColumnWidth(2, 150);
+    ui->SerTable->setColumnWidth(3, 150);
+    ui->SerTable->setColumnWidth(4, 150);
     ui->SerTable->verticalHeader()->hide();
     ui->SerTable->setShowGrid(false);
 }
@@ -654,13 +654,13 @@ void Admin::manageserviceusages(){
     ui->totalserviceUsage->setText(QString::number(Service::total));
     // ui->SerUsageTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->SerUsageTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    // ui->SerUsageTable->horizontalHeaderItem(ui->SerUsageTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->SerUsageTable->setColumnWidth(0, 200);
-    ui->SerUsageTable->setColumnWidth(1, 200);
-    ui->SerUsageTable->setColumnWidth(2, 200);
-    ui->SerUsageTable->setColumnWidth(3, 200);
-    ui->SerUsageTable->setColumnWidth(4, 200);
-    ui->SerUsageTable->setColumnWidth(5, 200);
+    ui->SerUsageTable->horizontalHeaderItem(ui->SerUsageTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
+    ui->SerUsageTable->setColumnWidth(0, 130);
+    ui->SerUsageTable->setColumnWidth(1, 130);
+    ui->SerUsageTable->setColumnWidth(2, 130);
+    ui->SerUsageTable->setColumnWidth(3, 130);
+    ui->SerUsageTable->setColumnWidth(4, 130);
+    ui->SerUsageTable->setColumnWidth(5, 130);
     ui->SerUsageTable->verticalHeader()->hide();
     ui->SerUsageTable->setShowGrid(false);
     // QRect headerRect = ui->SerUsageTable->visualRect(ui->SerUsageTable->model()->index(0, 0));
@@ -706,28 +706,13 @@ void Admin::manageaccounts(){
     ui->totalroom->setText(QString::number(Room::total));
     ui->AccountTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
     ui->AccountTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    // ui->AccountTable->horizontalHeaderItem(ui->AccountTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->AccountTable->setColumnWidth(0, 250);
-    ui->AccountTable->setColumnWidth(1, 250);
-    ui->AccountTable->setColumnWidth(2, 250);
-    ui->AccountTable->setColumnWidth(3, 250);
-    ui->AccountTable->setColumnWidth(4, 250);
+    ui->AccountTable->horizontalHeaderItem(ui->AccountTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
+    ui->AccountTable->setColumnWidth(0, 150);
+    ui->AccountTable->setColumnWidth(1, 150);
+    ui->AccountTable->setColumnWidth(2, 150);
+    ui->AccountTable->setColumnWidth(3, 150);
+    ui->AccountTable->setColumnWidth(4, 150);
     ui->AccountTable->verticalHeader()->hide();
-}
-
-void Admin::managesta(){
-    ui->stackedWidgetSta->setCurrentIndex(0);
-    drawchartMonths(2024);
-    ui->MonthTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
-    ui->MonthTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    // ui->MonthTable->horizontalHeaderItem(ui->AccountTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->MonthTable->verticalHeader()->hide();
-    ui->MonthTable->setShowGrid(false);
-    ui->YearTable->horizontalHeader()->setStyleSheet("QHeaderView::section { border: none; }");
-    ui->YearTable->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    // ui->YearTable->horizontalHeaderItem(ui->AccountTable->columnCount() - 1)->setTextAlignment(Qt::AlignCenter);
-    ui->YearTable->verticalHeader()->hide();
-    ui->YearTable->setShowGrid(false);
 }
 
 void Admin::on_pushButton_3_clicked()
@@ -925,8 +910,8 @@ void Admin::displayPayments(const Payment& p){
     ui->PaymentTable->setItem(row, 3, new QTableWidgetItem(QString::number(p.getRentAmount(), 'f', 2)));
     ui->PaymentTable->setItem(row, 4, new QTableWidgetItem(QString::number(p.getServiceAmount(), 'f', 2)));
     ui->PaymentTable->setItem(row, 5, new QTableWidgetItem(QString::number(p.getTotalAmount(), 'f', 2)));
-    ui->PaymentTable->setItem(row, 6, new QTableWidgetItem(QString::number(p.getBillMonth())));
-    ui->PaymentTable->setItem(row, 7, new QTableWidgetItem(QString::number(p.getBillYear())));
+    ui->PaymentTable->setItem(row, 6, new QTableWidgetItem(QString::number(p.getPayMonth())));
+    ui->PaymentTable->setItem(row, 7, new QTableWidgetItem(QString::number(p.getPayYear())));
     ui->PaymentTable->setItem(row, 8, new QTableWidgetItem(QString::fromStdString(p.getpayDate().toString())));
     QTableWidgetItem *status = new QTableWidgetItem(QString::fromStdString(p.getStatus() ? "Paid" : "Pending"));
     QFont font = status->font();
@@ -963,7 +948,7 @@ void Admin::displayContracts(const Contract& c){
     QWidget* buttonWidget = new QWidget();
 
     QPushButton* terminate_btn = new QPushButton();
-    terminate_btn->setIcon(QIcon(":/new/prefix1/Resources/rejectcontract.png"));
+    terminate_btn->setIcon(QIcon(":/new/prefix1/Resources/edit.png"));
     terminate_btn->setToolTip("Hủy thuê");
     connect(terminate_btn, &QPushButton::clicked, this, [this, row]() {
         // onterminate_btnClicked(row);
@@ -1024,14 +1009,14 @@ void Admin::displayReservations(const Reservation& re) {
         QWidget* buttonWidget = new QWidget();
 
         QPushButton* acceptbtn = new QPushButton();
-        acceptbtn->setIcon(QIcon(":/new/prefix1/Resources/accept.png"));
+        acceptbtn->setIcon(QIcon(":/new/prefix1/Resources/edit.png"));
         acceptbtn->setToolTip("Accept");
         connect(acceptbtn, &QPushButton::clicked, this, [this, row]() {
             onacceptbtnClicked(row);
         });
 
         QPushButton* rejectbtn = new QPushButton();
-        rejectbtn->setIcon(QIcon(":/new/prefix1/Resources/decline.png"));
+        rejectbtn->setIcon(QIcon(":/new/prefix1/Resources/delete.png"));
         rejectbtn->setToolTip("Reject");
         connect(rejectbtn, &QPushButton::clicked, this, [this, row]() {
             onrejectbtnClicked(row);
@@ -1654,7 +1639,7 @@ void Admin::drawchartMonths(int year){
     }
 
     QChart *chart = new QChart();
-    PaymentStatistics::showMonthlyComparison(year, chart, this);
+    PaymentStatistics::showMonthlyComparison(year, chart);
     QChartView *chartview = new QChartView(chart);
     chartview->setRenderHint(QPainter::Antialiasing);
 
@@ -1677,7 +1662,7 @@ void Admin::drawchartYears(int start, int end){
     }
 
     QChart *chart = new QChart();
-    PaymentStatistics::showYearlyComparison(start, end, chart, this);
+    PaymentStatistics::showYearlyComparison(start, end, chart);
     QChartView *chartview = new QChartView(chart);
     chartview->setRenderHint(QPainter::Antialiasing);
 
@@ -1701,16 +1686,10 @@ void Admin::on_Statisticsbtn_clicked()
 void Admin::on_TKbtn_clicked()
 {
     if(ui->comboBoxTK->currentIndex() == 0){
-        ui->MonthTable->clearContents();
-        ui->MonthTable->setRowCount(0);
-        ui->stackedWidgetSta->setCurrentIndex(0);
         int year = ui->TK3year->text().toInt();
         drawchartMonths(year);
     }
     if(ui->comboBoxTK->currentIndex() == 1){
-        ui->YearTable->clearContents();
-        ui->YearTable->setRowCount(0);
-        ui->stackedWidgetSta->setCurrentIndex(1);
         int start = ui->TK2year1->text().toInt();
         int end = ui->TK2year2->text().toInt();
         if (end - start > 15){
@@ -1737,27 +1716,5 @@ void Admin::on_CreatePaymentbtn_clicked()
 {
     Createpayment payment(this);
     payment.exec();
-    ui->PaymentTable->clearContents();
-    ui->PaymentTable->setRowCount(0);
-    Payment::showAllPayments(this);
 }
 
-void Admin::displayMonthlyComparison(int month, double tb, double tc, double t){
-    int row = ui->MonthTable->rowCount();
-    ui->MonthTable->insertRow(row);
-
-    ui->MonthTable->setItem(row, 0, new QTableWidgetItem(QString::number(month)));
-    ui->MonthTable->setItem(row, 1, new QTableWidgetItem(QString::number(tb, 'f', 2)));
-    ui->MonthTable->setItem(row, 2, new QTableWidgetItem(QString::number(tc, 'f', 2)));
-    ui->MonthTable->setItem(row, 3, new QTableWidgetItem(QString::number(t, 'f', 2)));
-}
-
-void Admin::displayYearlyComparison(int year, double tb, double tc, double t){
-    int row = ui->YearTable->rowCount();
-    ui->YearTable->insertRow(row);
-
-    ui->YearTable->setItem(row, 0, new QTableWidgetItem(QString::number(year)));
-    ui->YearTable->setItem(row, 1, new QTableWidgetItem(QString::number(tb, 'f', 2)));
-    ui->YearTable->setItem(row, 2, new QTableWidgetItem(QString::number(tc, 'f', 2)));
-    ui->YearTable->setItem(row, 3, new QTableWidgetItem(QString::number(t, 'f', 2)));
-}

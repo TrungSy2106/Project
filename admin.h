@@ -38,7 +38,6 @@ public:
     void managecontracts();
     void manageaccounts();
     void manageroomtypes();
-    void managesta();
 
     void displayRooms(const Room& room);
     void displayTenants(const Tenant& t);
@@ -49,8 +48,6 @@ public:
     void displayContracts(const Contract& c);
     void displayAccounts(const Account& a);
     void displayRoomTypes(const RoomType& rt);
-    void displayMonthlyComparison(int month, double tb, double tc, double t);
-    void displayYearlyComparison(int year, double tb, double tc, double t);
     void drawchartMonths(int year);
     void drawchartYears(int start, int end);
 private slots:

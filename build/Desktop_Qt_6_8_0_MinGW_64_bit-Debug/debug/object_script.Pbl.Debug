@@ -9,6 +9,7 @@ debug/Editroom.o
 debug/Editroomtype.o
 debug/Editservice.o
 debug/Edittenant.o
+debug/GUI.o
 debug/Login.o
 debug/Payment.o
 debug/PaymentStatistics.o

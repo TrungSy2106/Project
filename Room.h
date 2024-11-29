@@ -44,8 +44,8 @@ public:
     static void updateRoom(const string& rid, int sta, const string& rt);
     static void updateFile(const string& filename);
     static void searchByID(const string& id, Admin* adminWindow);
-    static void searchByID(const string& id, Createpayment* adminWindow);
     static void searchByStatus(int st, Admin* adminWindow);
+    static void searchByStatus(int st, Createpayment* adminWindow);
     static void searchByRoomType(const string& RT, Admin* adminWindow);
     static void searchByName(const string& name, Admin* adminWindow);
     static void load();

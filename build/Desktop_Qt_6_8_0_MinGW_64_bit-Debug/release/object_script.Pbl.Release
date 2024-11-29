@@ -9,6 +9,7 @@ release/Editroom.o
 release/Editroomtype.o
 release/Editservice.o
 release/Edittenant.o
+release/GUI.o
 release/Login.o
 release/Payment.o
 release/PaymentStatistics.o

@@ -120,22 +120,6 @@ void Room::searchByID(const string& id, Admin* adminWindow) {
         return;
     }
 }
-
-void Room::searchByID(const string& id, Createpayment* adminWindow) {
-    bool found = false;
-    LinkedList<Room>::Node* current = roomList.begin();
-    while (current != nullptr) {
-        string ID = current->data.getID();
-        if ( ID.find(id) != string::npos) {
-            current->data.displayuser(adminWindow);
-            found = true;
-        }
-        current = current->next;
-    }
-    if (!found) {
-        return;
-    }
-}
 // void Room::searchByID(const string& id, Admin* adminWindow) {
 //     Room* room = roomList.searchID(id);
 //     if (room)
@@ -144,6 +128,10 @@ void Room::searchByID(const string& id, Createpayment* adminWindow) {
 // }
 
 void Room::searchByStatus(int st, Admin* adminWindow){
+    roomList.searchStatus(st, adminWindow);
+}
+
+void Room::searchByStatus(int st, Createpayment* adminWindow){
     roomList.searchStatus(st, adminWindow);
 }
 

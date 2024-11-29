@@ -32,7 +32,7 @@ class Ui_Admin
 {
 public:
     QWidget *centralwidget;
-    QHBoxLayout *horizontalLayout_54;
+    QHBoxLayout *horizontalLayout;
     QFrame *MI_AD;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_3;
@@ -77,7 +77,6 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pushButton_5;
     QSpacerItem *horizontalSpacer_3;
-    QHBoxLayout *horizontalLayout;
     QFrame *frame_3;
     QHBoxLayout *horizontalLayout_4;
     QStackedWidget *stackedWidget;
@@ -187,7 +186,6 @@ public:
     QLabel *label_13;
     QLabel *totalroom_4;
     QSpacerItem *horizontalSpacer_18;
-    QPushButton *CreatePaymentbtn;
     QLabel *label_8;
     QComboBox *CBSP;
     QLabel *label_9;
@@ -198,7 +196,7 @@ public:
     QSpacerItem *verticalSpacer_10;
     QSpacerItem *horizontalSpacer_41;
     QWidget *page_8;
-    QVBoxLayout *verticalLayout_16;
+    QVBoxLayout *verticalLayout_14;
     QHBoxLayout *horizontalLayout_41;
     QLabel *label_27;
     QHBoxLayout *horizontalLayout_40;
@@ -230,16 +228,6 @@ public:
     QLineEdit *TK1year;
     QPushButton *TKbtn;
     QSpacerItem *horizontalSpacer_28;
-    QHBoxLayout *horizontalLayout_53;
-    QWidget *widgetchart_2;
-    QVBoxLayout *verticalLayout_14;
-    QStackedWidget *stackedWidgetSta;
-    QWidget *page_16;
-    QVBoxLayout *verticalLayout_17;
-    QTableWidget *MonthTable;
-    QWidget *page_17;
-    QVBoxLayout *verticalLayout_18;
-    QTableWidget *YearTable;
     QWidget *widgetchart;
     QWidget *page_9;
     QHBoxLayout *horizontalLayout_13;
@@ -299,23 +287,22 @@ public:
     QSpacerItem *verticalSpacer_5;
     QSpacerItem *horizontalSpacer_31;
     QWidget *page_12;
-    QFrame *frame;
 
     void setupUi(QMainWindow *Admin)
     {
         if (Admin->objectName().isEmpty())
             Admin->setObjectName("Admin");
-        Admin->resize(1519, 800);
+        Admin->resize(1500, 800);
         Admin->setMinimumSize(QSize(1000, 600));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/prefix1/Resources/logoooo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         Admin->setWindowIcon(icon);
         centralwidget = new QWidget(Admin);
         centralwidget->setObjectName("centralwidget");
-        horizontalLayout_54 = new QHBoxLayout(centralwidget);
-        horizontalLayout_54->setSpacing(0);
-        horizontalLayout_54->setObjectName("horizontalLayout_54");
-        horizontalLayout_54->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout(centralwidget);
+        horizontalLayout->setSpacing(0);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         MI_AD = new QFrame(centralwidget);
         MI_AD->setObjectName("MI_AD");
         MI_AD->setMinimumSize(QSize(71, 0));
@@ -420,11 +407,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/Service.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/Service1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/Person1.png"), QSize(), QIcon::Mode::Disabled, QIcon::State::Off);
-        Serbtn->setIcon(icon4);
+        Serbtn->setIcon(icon3);
         Serbtn->setIconSize(QSize(30, 18));
         Serbtn->setCheckable(true);
         Serbtn->setAutoExclusive(true);
@@ -438,10 +421,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/ServiceUsage.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/serviceusage1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        SerUsage1btn->setIcon(icon5);
+        SerUsage1btn->setIcon(icon1);
         SerUsage1btn->setIconSize(QSize(30, 18));
         SerUsage1btn->setCheckable(true);
         SerUsage1btn->setAutoExclusive(true);
@@ -455,10 +435,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/booking.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/booking1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Reservation1btn->setIcon(icon6);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/booking.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboard1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        Reservation1btn->setIcon(icon4);
         Reservation1btn->setIconSize(QSize(30, 18));
         Reservation1btn->setCheckable(true);
         Reservation1btn->setAutoExclusive(true);
@@ -472,10 +452,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/new/prefix1/Resources/payment.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon7.addFile(QString::fromUtf8(":/new/prefix1/Resources/payment1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Paymentbtn1->setIcon(icon7);
+        Paymentbtn1->setIcon(icon1);
         Paymentbtn1->setIconSize(QSize(30, 18));
         Paymentbtn1->setCheckable(true);
         Paymentbtn1->setAutoExclusive(true);
@@ -489,10 +466,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Statistics.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Statistics1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Statisticsbtn1->setIcon(icon8);
+        Statisticsbtn1->setIcon(icon1);
         Statisticsbtn1->setIconSize(QSize(30, 18));
         Statisticsbtn1->setCheckable(true);
         Statisticsbtn1->setAutoExclusive(true);
@@ -506,10 +480,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/contract.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/contract1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Contractbtn1->setIcon(icon9);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/contract.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboard1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        Contractbtn1->setIcon(icon5);
         Contractbtn1->setIconSize(QSize(30, 18));
         Contractbtn1->setCheckable(true);
         Contractbtn1->setAutoExclusive(true);
@@ -523,10 +497,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/Account.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/Account1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        Accountbtn1->setIcon(icon10);
+        Accountbtn1->setIcon(icon1);
         Accountbtn1->setIconSize(QSize(30, 18));
         Accountbtn1->setCheckable(true);
         Accountbtn1->setAutoExclusive(true);
@@ -540,10 +511,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/roomtype.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/roomtype1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        RoomTypebtn1->setIcon(icon11);
+        RoomTypebtn1->setIcon(icon1);
         RoomTypebtn1->setIconSize(QSize(30, 18));
         RoomTypebtn1->setCheckable(true);
         RoomTypebtn1->setAutoExclusive(true);
@@ -563,10 +531,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon12.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        signoutbtn1->setIcon(icon12);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/Resources/signoutsmall2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        signoutbtn1->setIcon(icon6);
         signoutbtn1->setIconSize(QSize(20, 20));
         signoutbtn1->setCheckable(true);
         signoutbtn1->setAutoExclusive(true);
@@ -574,7 +542,7 @@ public:
         verticalLayout_5->addWidget(signoutbtn1);
 
 
-        horizontalLayout_54->addWidget(MI_AD);
+        horizontalLayout->addWidget(MI_AD);
 
         MIT_AD = new QFrame(centralwidget);
         MIT_AD->setObjectName("MIT_AD");
@@ -632,9 +600,9 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboardbig.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        DB1btn->setIcon(icon13);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/new/prefix1/Resources/dashboardbig.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        DB1btn->setIcon(icon7);
         DB1btn->setIconSize(QSize(110, 18));
         DB1btn->setCheckable(true);
         DB1btn->setAutoExclusive(true);
@@ -652,10 +620,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon14.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        pushButton_15->setIcon(icon14);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon8.addFile(QString::fromUtf8(":/new/prefix1/Resources/Roomb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        pushButton_15->setIcon(icon8);
         pushButton_15->setIconSize(QSize(110, 18));
         pushButton_15->setCheckable(true);
         pushButton_15->setAutoExclusive(true);
@@ -673,10 +641,10 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        QIcon icon15;
-        icon15.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon15.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        pushButton_17->setIcon(icon15);
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon9.addFile(QString::fromUtf8(":/new/prefix1/Resources/Personb2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        pushButton_17->setIcon(icon9);
         pushButton_17->setIconSize(QSize(115, 18));
         pushButton_17->setCheckable(true);
         pushButton_17->setAutoExclusive(true);
@@ -694,7 +662,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Serbtn1->setIcon(icon15);
+        Serbtn1->setIcon(icon9);
         Serbtn1->setIconSize(QSize(115, 18));
         Serbtn1->setCheckable(true);
         Serbtn1->setAutoExclusive(true);
@@ -712,7 +680,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        SerUsagebtn->setIcon(icon14);
+        SerUsagebtn->setIcon(icon8);
         SerUsagebtn->setIconSize(QSize(110, 18));
         SerUsagebtn->setCheckable(true);
         SerUsagebtn->setAutoExclusive(true);
@@ -730,7 +698,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        ReservationUsagebtn->setIcon(icon14);
+        ReservationUsagebtn->setIcon(icon8);
         ReservationUsagebtn->setIconSize(QSize(110, 18));
         ReservationUsagebtn->setCheckable(true);
         ReservationUsagebtn->setAutoExclusive(true);
@@ -748,7 +716,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Paymentbtn->setIcon(icon14);
+        Paymentbtn->setIcon(icon8);
         Paymentbtn->setIconSize(QSize(110, 18));
         Paymentbtn->setCheckable(true);
         Paymentbtn->setAutoExclusive(true);
@@ -766,7 +734,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Statisticsbtn->setIcon(icon14);
+        Statisticsbtn->setIcon(icon8);
         Statisticsbtn->setIconSize(QSize(110, 18));
         Statisticsbtn->setCheckable(true);
         Statisticsbtn->setAutoExclusive(true);
@@ -784,7 +752,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Contractbtn->setIcon(icon14);
+        Contractbtn->setIcon(icon8);
         Contractbtn->setIconSize(QSize(110, 18));
         Contractbtn->setCheckable(true);
         Contractbtn->setAutoExclusive(true);
@@ -802,7 +770,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        Accountbtn->setIcon(icon14);
+        Accountbtn->setIcon(icon8);
         Accountbtn->setIconSize(QSize(110, 18));
         Accountbtn->setCheckable(true);
         Accountbtn->setAutoExclusive(true);
@@ -820,7 +788,7 @@ public:
 "background-color:white;\n"
 "border-radius:3px;\n"
 "}"));
-        RoomTypebtn->setIcon(icon14);
+        RoomTypebtn->setIcon(icon8);
         RoomTypebtn->setIconSize(QSize(110, 18));
         RoomTypebtn->setCheckable(true);
         RoomTypebtn->setAutoExclusive(true);
@@ -838,28 +806,25 @@ public:
         signoutbtn->setObjectName("signoutbtn");
         signoutbtn->setMinimumSize(QSize(0, 20));
         signoutbtn->setMaximumSize(QSize(16777215, 20));
-        QIcon icon16;
-        icon16.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon16.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        signoutbtn->setIcon(icon16);
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout2.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon10.addFile(QString::fromUtf8(":/new/prefix1/Resources/signout1.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        signoutbtn->setIcon(icon10);
         signoutbtn->setIconSize(QSize(100, 60));
 
         verticalLayout_3->addWidget(signoutbtn);
 
 
-        horizontalLayout_54->addWidget(MIT_AD);
+        horizontalLayout->addWidget(MIT_AD);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
         frame_4 = new QFrame(centralwidget);
         frame_4->setObjectName("frame_4");
-        frame_4->setMinimumSize(QSize(727, 0));
-        frame_4->setMaximumSize(QSize(16777215, 16777215));
         frame_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "border:none;\n"
 "}\n"
 "QFrame{\n"
-"background-color: rgb(255, 255, 255);\n"
 "border:none;\n"
 "}"));
         frame_4->setFrameShape(QFrame::Shape::StyledPanel);
@@ -869,10 +834,10 @@ public:
         pushButton_5 = new QPushButton(frame_4);
         pushButton_5->setObjectName("pushButton_5");
         pushButton_5->setMaximumSize(QSize(35, 35));
-        QIcon icon17;
-        icon17.addFile(QString::fromUtf8(":/new/prefix1/Resources/Left.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        icon17.addFile(QString::fromUtf8(":/new/prefix1/Resources/Right.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
-        pushButton_5->setIcon(icon17);
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/Left.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/Resources/Right.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        pushButton_5->setIcon(icon11);
         pushButton_5->setIconSize(QSize(40, 40));
         pushButton_5->setCheckable(true);
 
@@ -885,13 +850,10 @@ public:
 
         verticalLayout->addWidget(frame_4);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(0);
-        horizontalLayout->setObjectName("horizontalLayout");
         frame_3 = new QFrame(centralwidget);
         frame_3->setObjectName("frame_3");
-        frame_3->setMaximumSize(QSize(16777215, 16777215));
         frame_3->setStyleSheet(QString::fromUtf8("QFrame{\n"
+"	background-color: rgb(255, 255, 255);\n"
 "border:none;\n"
 "}\n"
 ""));
@@ -963,9 +925,9 @@ public:
         addroom->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        QIcon icon18;
-        icon18.addFile(QString::fromUtf8(":/new/prefix1/Resources/add.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        addroom->setIcon(icon18);
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/new/prefix1/Resources/add.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        addroom->setIcon(icon12);
         addroom->setIconSize(QSize(10, 10));
         addroom->setCheckable(false);
 
@@ -996,9 +958,9 @@ public:
 
         Refbtn = new QPushButton(page_2);
         Refbtn->setObjectName("Refbtn");
-        QIcon icon19;
-        icon19.addFile(QString::fromUtf8(":/new/prefix1/Resources/reload.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        Refbtn->setIcon(icon19);
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/new/prefix1/Resources/reload.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        Refbtn->setIcon(icon13);
 
         horizontalLayout_7->addWidget(Refbtn);
 
@@ -1138,7 +1100,7 @@ public:
 
         RefTenantbtn = new QPushButton(page_3);
         RefTenantbtn->setObjectName("RefTenantbtn");
-        RefTenantbtn->setIcon(icon19);
+        RefTenantbtn->setIcon(icon13);
 
         horizontalLayout_8->addWidget(RefTenantbtn);
 
@@ -1254,7 +1216,7 @@ public:
         addSer->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        addSer->setIcon(icon18);
+        addSer->setIcon(icon12);
         addSer->setIconSize(QSize(10, 10));
         addSer->setCheckable(false);
 
@@ -1281,7 +1243,7 @@ public:
 
         RefbtnSer = new QPushButton(page_4);
         RefbtnSer->setObjectName("RefbtnSer");
-        RefbtnSer->setIcon(icon19);
+        RefbtnSer->setIcon(icon13);
 
         horizontalLayout_22->addWidget(RefbtnSer);
 
@@ -1412,7 +1374,7 @@ public:
 
         RefbtnSer_3 = new QPushButton(page_5);
         RefbtnSer_3->setObjectName("RefbtnSer_3");
-        RefbtnSer_3->setIcon(icon19);
+        RefbtnSer_3->setIcon(icon13);
 
         horizontalLayout_28->addWidget(RefbtnSer_3);
 
@@ -1544,7 +1506,7 @@ public:
 
         RefRebtn = new QPushButton(page_6);
         RefRebtn->setObjectName("RefRebtn");
-        RefRebtn->setIcon(icon19);
+        RefRebtn->setIcon(icon13);
 
         horizontalLayout_16->addWidget(RefRebtn);
 
@@ -1660,11 +1622,6 @@ public:
 
         horizontalLayout_14->addItem(horizontalSpacer_18);
 
-        CreatePaymentbtn = new QPushButton(page_7);
-        CreatePaymentbtn->setObjectName("CreatePaymentbtn");
-
-        horizontalLayout_14->addWidget(CreatePaymentbtn);
-
         label_8 = new QLabel(page_7);
         label_8->setObjectName("label_8");
 
@@ -1705,16 +1662,16 @@ public:
 
         searchPayment = new QPushButton(page_7);
         searchPayment->setObjectName("searchPayment");
-        QIcon icon20;
-        icon20.addFile(QString::fromUtf8(":/new/prefix1/Resources/loupe.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        searchPayment->setIcon(icon20);
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/new/prefix1/Resources/loupe.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        searchPayment->setIcon(icon14);
         searchPayment->setCheckable(false);
 
         horizontalLayout_14->addWidget(searchPayment);
 
         RefPaymentbtn = new QPushButton(page_7);
         RefPaymentbtn->setObjectName("RefPaymentbtn");
-        RefPaymentbtn->setIcon(icon19);
+        RefPaymentbtn->setIcon(icon13);
 
         horizontalLayout_14->addWidget(RefPaymentbtn);
 
@@ -1794,8 +1751,8 @@ public:
         stackedWidget->addWidget(page_7);
         page_8 = new QWidget();
         page_8->setObjectName("page_8");
-        verticalLayout_16 = new QVBoxLayout(page_8);
-        verticalLayout_16->setObjectName("verticalLayout_16");
+        verticalLayout_14 = new QVBoxLayout(page_8);
+        verticalLayout_14->setObjectName("verticalLayout_14");
         horizontalLayout_41 = new QHBoxLayout();
         horizontalLayout_41->setObjectName("horizontalLayout_41");
         label_27 = new QLabel(page_8);
@@ -1820,8 +1777,6 @@ public:
         comboBoxTK->addItem(QString());
         comboBoxTK->addItem(QString());
         comboBoxTK->setObjectName("comboBoxTK");
-        comboBoxTK->setMinimumSize(QSize(160, 30));
-        comboBoxTK->setFont(font2);
 
         horizontalLayout_39->addWidget(comboBoxTK);
 
@@ -1835,13 +1790,11 @@ public:
         horizontalLayout_35->setObjectName("horizontalLayout_35");
         label_24 = new QLabel(page_13);
         label_24->setObjectName("label_24");
-        label_24->setFont(font2);
 
         horizontalLayout_35->addWidget(label_24);
 
         TK2year1 = new QLineEdit(page_13);
         TK2year1->setObjectName("TK2year1");
-        TK2year1->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_35->addWidget(TK2year1);
 
@@ -1852,13 +1805,11 @@ public:
         horizontalLayout_36->setObjectName("horizontalLayout_36");
         label_28 = new QLabel(page_13);
         label_28->setObjectName("label_28");
-        label_28->setFont(font2);
 
         horizontalLayout_36->addWidget(label_28);
 
         TK2year2 = new QLineEdit(page_13);
         TK2year2->setObjectName("TK2year2");
-        TK2year2->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_36->addWidget(TK2year2);
 
@@ -1876,13 +1827,11 @@ public:
         horizontalLayout_42->setObjectName("horizontalLayout_42");
         label_29 = new QLabel(page_15);
         label_29->setObjectName("label_29");
-        label_29->setFont(font2);
 
         horizontalLayout_42->addWidget(label_29);
 
         TK3year = new QLineEdit(page_15);
         TK3year->setObjectName("TK3year");
-        TK3year->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_42->addWidget(TK3year);
 
@@ -1905,7 +1854,6 @@ public:
         horizontalLayout_37->setObjectName("horizontalLayout_37");
         label_25 = new QLabel(page_14);
         label_25->setObjectName("label_25");
-        label_25->setFont(font2);
 
         horizontalLayout_37->addWidget(label_25);
 
@@ -1924,20 +1872,16 @@ public:
         TK1Month->addItem(QString());
         TK1Month->addItem(QString());
         TK1Month->setObjectName("TK1Month");
-        TK1Month->setMinimumSize(QSize(0, 30));
-        TK1Month->setFont(font2);
 
         horizontalLayout_37->addWidget(TK1Month);
 
         label_26 = new QLabel(page_14);
         label_26->setObjectName("label_26");
-        label_26->setFont(font2);
 
         horizontalLayout_37->addWidget(label_26);
 
         TK1year = new QLineEdit(page_14);
         TK1year->setObjectName("TK1year");
-        TK1year->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_37->addWidget(TK1year);
 
@@ -1950,8 +1894,6 @@ public:
 
         TKbtn = new QPushButton(page_8);
         TKbtn->setObjectName("TKbtn");
-        TKbtn->setMinimumSize(QSize(60, 30));
-        TKbtn->setFont(font2);
 
         horizontalLayout_39->addWidget(TKbtn);
 
@@ -1966,81 +1908,13 @@ public:
         horizontalLayout_41->addLayout(horizontalLayout_40);
 
 
-        verticalLayout_16->addLayout(horizontalLayout_41);
-
-        horizontalLayout_53 = new QHBoxLayout();
-        horizontalLayout_53->setSpacing(10);
-        horizontalLayout_53->setObjectName("horizontalLayout_53");
-        widgetchart_2 = new QWidget(page_8);
-        widgetchart_2->setObjectName("widgetchart_2");
-        widgetchart_2->setMinimumSize(QSize(410, 670));
-        widgetchart_2->setMaximumSize(QSize(410, 16777215));
-        widgetchart_2->setStyleSheet(QString::fromUtf8("QWidget{\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:15px;\n"
-"}"));
-        verticalLayout_14 = new QVBoxLayout(widgetchart_2);
-        verticalLayout_14->setObjectName("verticalLayout_14");
-        stackedWidgetSta = new QStackedWidget(widgetchart_2);
-        stackedWidgetSta->setObjectName("stackedWidgetSta");
-        page_16 = new QWidget();
-        page_16->setObjectName("page_16");
-        verticalLayout_17 = new QVBoxLayout(page_16);
-        verticalLayout_17->setObjectName("verticalLayout_17");
-        MonthTable = new QTableWidget(page_16);
-        if (MonthTable->columnCount() < 4)
-            MonthTable->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
-        MonthTable->setHorizontalHeaderItem(0, __qtablewidgetitem42);
-        QTableWidgetItem *__qtablewidgetitem43 = new QTableWidgetItem();
-        MonthTable->setHorizontalHeaderItem(1, __qtablewidgetitem43);
-        QTableWidgetItem *__qtablewidgetitem44 = new QTableWidgetItem();
-        MonthTable->setHorizontalHeaderItem(2, __qtablewidgetitem44);
-        QTableWidgetItem *__qtablewidgetitem45 = new QTableWidgetItem();
-        MonthTable->setHorizontalHeaderItem(3, __qtablewidgetitem45);
-        MonthTable->setObjectName("MonthTable");
-
-        verticalLayout_17->addWidget(MonthTable);
-
-        stackedWidgetSta->addWidget(page_16);
-        page_17 = new QWidget();
-        page_17->setObjectName("page_17");
-        verticalLayout_18 = new QVBoxLayout(page_17);
-        verticalLayout_18->setObjectName("verticalLayout_18");
-        YearTable = new QTableWidget(page_17);
-        if (YearTable->columnCount() < 4)
-            YearTable->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem46 = new QTableWidgetItem();
-        YearTable->setHorizontalHeaderItem(0, __qtablewidgetitem46);
-        QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
-        YearTable->setHorizontalHeaderItem(1, __qtablewidgetitem47);
-        QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
-        YearTable->setHorizontalHeaderItem(2, __qtablewidgetitem48);
-        QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
-        YearTable->setHorizontalHeaderItem(3, __qtablewidgetitem49);
-        YearTable->setObjectName("YearTable");
-
-        verticalLayout_18->addWidget(YearTable);
-
-        stackedWidgetSta->addWidget(page_17);
-
-        verticalLayout_14->addWidget(stackedWidgetSta);
-
-
-        horizontalLayout_53->addWidget(widgetchart_2);
+        verticalLayout_14->addLayout(horizontalLayout_41);
 
         widgetchart = new QWidget(page_8);
         widgetchart->setObjectName("widgetchart");
-        widgetchart->setMinimumSize(QSize(0, 670));
-        widgetchart->setStyleSheet(QString::fromUtf8("QWidget{\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:15px;\n"
-"}"));
+        widgetchart->setMinimumSize(QSize(0, 690));
 
-        horizontalLayout_53->addWidget(widgetchart);
-
-
-        verticalLayout_16->addLayout(horizontalLayout_53);
+        verticalLayout_14->addWidget(widgetchart);
 
         stackedWidget->addWidget(page_8);
         page_9 = new QWidget();
@@ -2112,14 +1986,14 @@ public:
 
         searchRer_3 = new QPushButton(page_9);
         searchRer_3->setObjectName("searchRer_3");
-        searchRer_3->setIcon(icon20);
+        searchRer_3->setIcon(icon14);
         searchRer_3->setCheckable(false);
 
         horizontalLayout_25->addWidget(searchRer_3);
 
         RefRebtn_3 = new QPushButton(page_9);
         RefRebtn_3->setObjectName("RefRebtn_3");
-        RefRebtn_3->setIcon(icon19);
+        RefRebtn_3->setIcon(icon13);
 
         horizontalLayout_25->addWidget(RefRebtn_3);
 
@@ -2129,38 +2003,38 @@ public:
         ContractTable = new QTableWidget(page_9);
         if (ContractTable->columnCount() < 13)
             ContractTable->setColumnCount(13);
+        QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
+        __qtablewidgetitem42->setFont(font2);
+        ContractTable->setHorizontalHeaderItem(0, __qtablewidgetitem42);
+        QTableWidgetItem *__qtablewidgetitem43 = new QTableWidgetItem();
+        __qtablewidgetitem43->setFont(font2);
+        ContractTable->setHorizontalHeaderItem(1, __qtablewidgetitem43);
+        QTableWidgetItem *__qtablewidgetitem44 = new QTableWidgetItem();
+        __qtablewidgetitem44->setFont(font2);
+        ContractTable->setHorizontalHeaderItem(2, __qtablewidgetitem44);
+        QTableWidgetItem *__qtablewidgetitem45 = new QTableWidgetItem();
+        __qtablewidgetitem45->setFont(font2);
+        ContractTable->setHorizontalHeaderItem(3, __qtablewidgetitem45);
+        QTableWidgetItem *__qtablewidgetitem46 = new QTableWidgetItem();
+        __qtablewidgetitem46->setFont(font2);
+        ContractTable->setHorizontalHeaderItem(4, __qtablewidgetitem46);
+        QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
+        __qtablewidgetitem47->setFont(font2);
+        ContractTable->setHorizontalHeaderItem(5, __qtablewidgetitem47);
+        QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
+        ContractTable->setHorizontalHeaderItem(6, __qtablewidgetitem48);
+        QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
+        ContractTable->setHorizontalHeaderItem(7, __qtablewidgetitem49);
         QTableWidgetItem *__qtablewidgetitem50 = new QTableWidgetItem();
-        __qtablewidgetitem50->setFont(font2);
-        ContractTable->setHorizontalHeaderItem(0, __qtablewidgetitem50);
+        ContractTable->setHorizontalHeaderItem(8, __qtablewidgetitem50);
         QTableWidgetItem *__qtablewidgetitem51 = new QTableWidgetItem();
-        __qtablewidgetitem51->setFont(font2);
-        ContractTable->setHorizontalHeaderItem(1, __qtablewidgetitem51);
+        ContractTable->setHorizontalHeaderItem(9, __qtablewidgetitem51);
         QTableWidgetItem *__qtablewidgetitem52 = new QTableWidgetItem();
-        __qtablewidgetitem52->setFont(font2);
-        ContractTable->setHorizontalHeaderItem(2, __qtablewidgetitem52);
+        ContractTable->setHorizontalHeaderItem(10, __qtablewidgetitem52);
         QTableWidgetItem *__qtablewidgetitem53 = new QTableWidgetItem();
-        __qtablewidgetitem53->setFont(font2);
-        ContractTable->setHorizontalHeaderItem(3, __qtablewidgetitem53);
+        ContractTable->setHorizontalHeaderItem(11, __qtablewidgetitem53);
         QTableWidgetItem *__qtablewidgetitem54 = new QTableWidgetItem();
-        __qtablewidgetitem54->setFont(font2);
-        ContractTable->setHorizontalHeaderItem(4, __qtablewidgetitem54);
-        QTableWidgetItem *__qtablewidgetitem55 = new QTableWidgetItem();
-        __qtablewidgetitem55->setFont(font2);
-        ContractTable->setHorizontalHeaderItem(5, __qtablewidgetitem55);
-        QTableWidgetItem *__qtablewidgetitem56 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(6, __qtablewidgetitem56);
-        QTableWidgetItem *__qtablewidgetitem57 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(7, __qtablewidgetitem57);
-        QTableWidgetItem *__qtablewidgetitem58 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(8, __qtablewidgetitem58);
-        QTableWidgetItem *__qtablewidgetitem59 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(9, __qtablewidgetitem59);
-        QTableWidgetItem *__qtablewidgetitem60 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(10, __qtablewidgetitem60);
-        QTableWidgetItem *__qtablewidgetitem61 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(11, __qtablewidgetitem61);
-        QTableWidgetItem *__qtablewidgetitem62 = new QTableWidgetItem();
-        ContractTable->setHorizontalHeaderItem(12, __qtablewidgetitem62);
+        ContractTable->setHorizontalHeaderItem(12, __qtablewidgetitem54);
         ContractTable->setObjectName("ContractTable");
         ContractTable->setMinimumSize(QSize(1200, 600));
         ContractTable->setFont(font2);
@@ -2253,7 +2127,7 @@ public:
         addroom_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        addroom_2->setIcon(icon18);
+        addroom_2->setIcon(icon12);
         addroom_2->setIconSize(QSize(10, 10));
         addroom_2->setCheckable(false);
 
@@ -2284,7 +2158,7 @@ public:
 
         Refbtn_2 = new QPushButton(page_10);
         Refbtn_2->setObjectName("Refbtn_2");
-        Refbtn_2->setIcon(icon19);
+        Refbtn_2->setIcon(icon13);
 
         horizontalLayout_20->addWidget(Refbtn_2);
 
@@ -2294,14 +2168,14 @@ public:
         AccountTable = new QTableWidget(page_10);
         if (AccountTable->columnCount() < 4)
             AccountTable->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem63 = new QTableWidgetItem();
-        AccountTable->setHorizontalHeaderItem(0, __qtablewidgetitem63);
-        QTableWidgetItem *__qtablewidgetitem64 = new QTableWidgetItem();
-        AccountTable->setHorizontalHeaderItem(1, __qtablewidgetitem64);
-        QTableWidgetItem *__qtablewidgetitem65 = new QTableWidgetItem();
-        AccountTable->setHorizontalHeaderItem(2, __qtablewidgetitem65);
-        QTableWidgetItem *__qtablewidgetitem66 = new QTableWidgetItem();
-        AccountTable->setHorizontalHeaderItem(3, __qtablewidgetitem66);
+        QTableWidgetItem *__qtablewidgetitem55 = new QTableWidgetItem();
+        AccountTable->setHorizontalHeaderItem(0, __qtablewidgetitem55);
+        QTableWidgetItem *__qtablewidgetitem56 = new QTableWidgetItem();
+        AccountTable->setHorizontalHeaderItem(1, __qtablewidgetitem56);
+        QTableWidgetItem *__qtablewidgetitem57 = new QTableWidgetItem();
+        AccountTable->setHorizontalHeaderItem(2, __qtablewidgetitem57);
+        QTableWidgetItem *__qtablewidgetitem58 = new QTableWidgetItem();
+        AccountTable->setHorizontalHeaderItem(3, __qtablewidgetitem58);
         AccountTable->setObjectName("AccountTable");
         AccountTable->setMinimumSize(QSize(1000, 600));
         AccountTable->setFont(font2);
@@ -2395,7 +2269,7 @@ public:
         addroom_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: rgb(255, 255, 255);\n"
 "}"));
-        addroom_3->setIcon(icon18);
+        addroom_3->setIcon(icon12);
         addroom_3->setIconSize(QSize(10, 10));
         addroom_3->setCheckable(false);
 
@@ -2421,7 +2295,7 @@ public:
 
         Refbtn_3 = new QPushButton(page_11);
         Refbtn_3->setObjectName("Refbtn_3");
-        Refbtn_3->setIcon(icon19);
+        Refbtn_3->setIcon(icon13);
 
         horizontalLayout_33->addWidget(Refbtn_3);
 
@@ -2431,16 +2305,16 @@ public:
         RoomTypeTable = new QTableWidget(page_11);
         if (RoomTypeTable->columnCount() < 5)
             RoomTypeTable->setColumnCount(5);
-        QTableWidgetItem *__qtablewidgetitem67 = new QTableWidgetItem();
-        RoomTypeTable->setHorizontalHeaderItem(0, __qtablewidgetitem67);
-        QTableWidgetItem *__qtablewidgetitem68 = new QTableWidgetItem();
-        RoomTypeTable->setHorizontalHeaderItem(1, __qtablewidgetitem68);
-        QTableWidgetItem *__qtablewidgetitem69 = new QTableWidgetItem();
-        RoomTypeTable->setHorizontalHeaderItem(2, __qtablewidgetitem69);
-        QTableWidgetItem *__qtablewidgetitem70 = new QTableWidgetItem();
-        RoomTypeTable->setHorizontalHeaderItem(3, __qtablewidgetitem70);
-        QTableWidgetItem *__qtablewidgetitem71 = new QTableWidgetItem();
-        RoomTypeTable->setHorizontalHeaderItem(4, __qtablewidgetitem71);
+        QTableWidgetItem *__qtablewidgetitem59 = new QTableWidgetItem();
+        RoomTypeTable->setHorizontalHeaderItem(0, __qtablewidgetitem59);
+        QTableWidgetItem *__qtablewidgetitem60 = new QTableWidgetItem();
+        RoomTypeTable->setHorizontalHeaderItem(1, __qtablewidgetitem60);
+        QTableWidgetItem *__qtablewidgetitem61 = new QTableWidgetItem();
+        RoomTypeTable->setHorizontalHeaderItem(2, __qtablewidgetitem61);
+        QTableWidgetItem *__qtablewidgetitem62 = new QTableWidgetItem();
+        RoomTypeTable->setHorizontalHeaderItem(3, __qtablewidgetitem62);
+        QTableWidgetItem *__qtablewidgetitem63 = new QTableWidgetItem();
+        RoomTypeTable->setHorizontalHeaderItem(4, __qtablewidgetitem63);
         RoomTypeTable->setObjectName("RoomTypeTable");
         RoomTypeTable->setMinimumSize(QSize(1000, 600));
         RoomTypeTable->setFont(font2);
@@ -2488,21 +2362,12 @@ public:
         horizontalLayout_4->addWidget(stackedWidget);
 
 
-        horizontalLayout->addWidget(frame_3);
+        verticalLayout->addWidget(frame_3);
 
-        frame = new QFrame(centralwidget);
-        frame->setObjectName("frame");
-        frame->setMaximumSize(QSize(0, 16777215));
-        frame->setFrameShape(QFrame::Shape::StyledPanel);
-        frame->setFrameShadow(QFrame::Shadow::Raised);
+        verticalLayout->setStretch(0, 1);
+        verticalLayout->setStretch(1, 15);
 
-        horizontalLayout->addWidget(frame);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-
-        horizontalLayout_54->addLayout(verticalLayout);
+        horizontalLayout->addLayout(verticalLayout);
 
         Admin->setCentralWidget(centralwidget);
 
@@ -2535,8 +2400,7 @@ public:
         QObject::connect(RoomTypebtn, &QPushButton::toggled, RoomTypebtn1, &QPushButton::setChecked);
 
         stackedWidget->setCurrentIndex(7);
-        stackedWidget_2->setCurrentIndex(2);
-        stackedWidgetSta->setCurrentIndex(1);
+        stackedWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Admin);
@@ -2696,7 +2560,6 @@ public:
         label_12->setText(QCoreApplication::translate("Admin", "Payment List", nullptr));
         label_13->setText(QCoreApplication::translate("Admin", "Total: ", nullptr));
         totalroom_4->setText(QCoreApplication::translate("Admin", "TextLabel", nullptr));
-        CreatePaymentbtn->setText(QCoreApplication::translate("Admin", "Create Payment", nullptr));
         label_8->setText(QCoreApplication::translate("Admin", "Month: ", nullptr));
         CBSP->setItemText(0, QCoreApplication::translate("Admin", "Choose", nullptr));
         CBSP->setItemText(1, QCoreApplication::translate("Admin", "1", nullptr));
@@ -2765,22 +2628,6 @@ public:
 
         label_26->setText(QCoreApplication::translate("Admin", "Year: ", nullptr));
         TKbtn->setText(QCoreApplication::translate("Admin", "Th\341\273\221ng k\303\252", nullptr));
-        QTableWidgetItem *___qtablewidgetitem42 = MonthTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem42->setText(QCoreApplication::translate("Admin", "Th\303\241ng", nullptr));
-        QTableWidgetItem *___qtablewidgetitem43 = MonthTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem43->setText(QCoreApplication::translate("Admin", "T\341\273\225ng h\303\263a \304\221\306\241n", nullptr));
-        QTableWidgetItem *___qtablewidgetitem44 = MonthTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem44->setText(QCoreApplication::translate("Admin", "\304\220\303\243 thu", nullptr));
-        QTableWidgetItem *___qtablewidgetitem45 = MonthTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem45->setText(QCoreApplication::translate("Admin", "Ch\306\260a thu", nullptr));
-        QTableWidgetItem *___qtablewidgetitem46 = YearTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem46->setText(QCoreApplication::translate("Admin", "N\304\203m", nullptr));
-        QTableWidgetItem *___qtablewidgetitem47 = YearTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem47->setText(QCoreApplication::translate("Admin", "T\341\273\225ng h\303\263a \304\221\306\241n", nullptr));
-        QTableWidgetItem *___qtablewidgetitem48 = YearTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem48->setText(QCoreApplication::translate("Admin", "\304\220\303\243 thu", nullptr));
-        QTableWidgetItem *___qtablewidgetitem49 = YearTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem49->setText(QCoreApplication::translate("Admin", "Ch\306\260a thu", nullptr));
         label_17->setText(QCoreApplication::translate("Admin", "Contract List", nullptr));
         label_16->setText(QCoreApplication::translate("Admin", "Total: ", nullptr));
         totalroom_5->setText(QCoreApplication::translate("Admin", "TextLabel", nullptr));
@@ -2795,32 +2642,32 @@ public:
         LineEditSearchRe_3->setPlaceholderText(QCoreApplication::translate("Admin", "Search here ...", nullptr));
         searchRer_3->setText(QCoreApplication::translate("Admin", "Search", nullptr));
         RefRebtn_3->setText(QCoreApplication::translate("Admin", "Refresh", nullptr));
-        QTableWidgetItem *___qtablewidgetitem50 = ContractTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem50->setText(QCoreApplication::translate("Admin", "Contract ID", nullptr));
-        QTableWidgetItem *___qtablewidgetitem51 = ContractTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem51->setText(QCoreApplication::translate("Admin", "Room ID", nullptr));
-        QTableWidgetItem *___qtablewidgetitem52 = ContractTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem52->setText(QCoreApplication::translate("Admin", "Room Type", nullptr));
-        QTableWidgetItem *___qtablewidgetitem53 = ContractTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem53->setText(QCoreApplication::translate("Admin", "Tenant ID", nullptr));
-        QTableWidgetItem *___qtablewidgetitem54 = ContractTable->horizontalHeaderItem(4);
-        ___qtablewidgetitem54->setText(QCoreApplication::translate("Admin", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem55 = ContractTable->horizontalHeaderItem(5);
-        ___qtablewidgetitem55->setText(QCoreApplication::translate("Admin", "Age", nullptr));
-        QTableWidgetItem *___qtablewidgetitem56 = ContractTable->horizontalHeaderItem(6);
-        ___qtablewidgetitem56->setText(QCoreApplication::translate("Admin", "CCCD", nullptr));
-        QTableWidgetItem *___qtablewidgetitem57 = ContractTable->horizontalHeaderItem(7);
-        ___qtablewidgetitem57->setText(QCoreApplication::translate("Admin", "Phone", nullptr));
-        QTableWidgetItem *___qtablewidgetitem58 = ContractTable->horizontalHeaderItem(8);
-        ___qtablewidgetitem58->setText(QCoreApplication::translate("Admin", "Start Date", nullptr));
-        QTableWidgetItem *___qtablewidgetitem59 = ContractTable->horizontalHeaderItem(9);
-        ___qtablewidgetitem59->setText(QCoreApplication::translate("Admin", "End Date", nullptr));
-        QTableWidgetItem *___qtablewidgetitem60 = ContractTable->horizontalHeaderItem(10);
-        ___qtablewidgetitem60->setText(QCoreApplication::translate("Admin", "Price", nullptr));
-        QTableWidgetItem *___qtablewidgetitem61 = ContractTable->horizontalHeaderItem(11);
-        ___qtablewidgetitem61->setText(QCoreApplication::translate("Admin", "Status", nullptr));
-        QTableWidgetItem *___qtablewidgetitem62 = ContractTable->horizontalHeaderItem(12);
-        ___qtablewidgetitem62->setText(QCoreApplication::translate("Admin", "Action", nullptr));
+        QTableWidgetItem *___qtablewidgetitem42 = ContractTable->horizontalHeaderItem(0);
+        ___qtablewidgetitem42->setText(QCoreApplication::translate("Admin", "Contract ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem43 = ContractTable->horizontalHeaderItem(1);
+        ___qtablewidgetitem43->setText(QCoreApplication::translate("Admin", "Room ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem44 = ContractTable->horizontalHeaderItem(2);
+        ___qtablewidgetitem44->setText(QCoreApplication::translate("Admin", "Room Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem45 = ContractTable->horizontalHeaderItem(3);
+        ___qtablewidgetitem45->setText(QCoreApplication::translate("Admin", "Tenant ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem46 = ContractTable->horizontalHeaderItem(4);
+        ___qtablewidgetitem46->setText(QCoreApplication::translate("Admin", "Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem47 = ContractTable->horizontalHeaderItem(5);
+        ___qtablewidgetitem47->setText(QCoreApplication::translate("Admin", "Age", nullptr));
+        QTableWidgetItem *___qtablewidgetitem48 = ContractTable->horizontalHeaderItem(6);
+        ___qtablewidgetitem48->setText(QCoreApplication::translate("Admin", "CCCD", nullptr));
+        QTableWidgetItem *___qtablewidgetitem49 = ContractTable->horizontalHeaderItem(7);
+        ___qtablewidgetitem49->setText(QCoreApplication::translate("Admin", "Phone", nullptr));
+        QTableWidgetItem *___qtablewidgetitem50 = ContractTable->horizontalHeaderItem(8);
+        ___qtablewidgetitem50->setText(QCoreApplication::translate("Admin", "Start Date", nullptr));
+        QTableWidgetItem *___qtablewidgetitem51 = ContractTable->horizontalHeaderItem(9);
+        ___qtablewidgetitem51->setText(QCoreApplication::translate("Admin", "End Date", nullptr));
+        QTableWidgetItem *___qtablewidgetitem52 = ContractTable->horizontalHeaderItem(10);
+        ___qtablewidgetitem52->setText(QCoreApplication::translate("Admin", "Price", nullptr));
+        QTableWidgetItem *___qtablewidgetitem53 = ContractTable->horizontalHeaderItem(11);
+        ___qtablewidgetitem53->setText(QCoreApplication::translate("Admin", "Status", nullptr));
+        QTableWidgetItem *___qtablewidgetitem54 = ContractTable->horizontalHeaderItem(12);
+        ___qtablewidgetitem54->setText(QCoreApplication::translate("Admin", "Action", nullptr));
         label_20->setText(QCoreApplication::translate("Admin", "Account List", nullptr));
         label_21->setText(QCoreApplication::translate("Admin", "Total: ", nullptr));
         totalroom_2->setText(QCoreApplication::translate("Admin", "TextLabel", nullptr));
@@ -2836,14 +2683,14 @@ public:
 
         LineEditSearchRoom_2->setPlaceholderText(QCoreApplication::translate("Admin", "Search here ...", nullptr));
         Refbtn_2->setText(QCoreApplication::translate("Admin", "Refresh", nullptr));
-        QTableWidgetItem *___qtablewidgetitem63 = AccountTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem63->setText(QCoreApplication::translate("Admin", "Account ID", nullptr));
-        QTableWidgetItem *___qtablewidgetitem64 = AccountTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem64->setText(QCoreApplication::translate("Admin", "Username", nullptr));
-        QTableWidgetItem *___qtablewidgetitem65 = AccountTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem65->setText(QCoreApplication::translate("Admin", "Password", nullptr));
-        QTableWidgetItem *___qtablewidgetitem66 = AccountTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem66->setText(QCoreApplication::translate("Admin", "Role", nullptr));
+        QTableWidgetItem *___qtablewidgetitem55 = AccountTable->horizontalHeaderItem(0);
+        ___qtablewidgetitem55->setText(QCoreApplication::translate("Admin", "Account ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem56 = AccountTable->horizontalHeaderItem(1);
+        ___qtablewidgetitem56->setText(QCoreApplication::translate("Admin", "Username", nullptr));
+        QTableWidgetItem *___qtablewidgetitem57 = AccountTable->horizontalHeaderItem(2);
+        ___qtablewidgetitem57->setText(QCoreApplication::translate("Admin", "Password", nullptr));
+        QTableWidgetItem *___qtablewidgetitem58 = AccountTable->horizontalHeaderItem(3);
+        ___qtablewidgetitem58->setText(QCoreApplication::translate("Admin", "Role", nullptr));
         label_22->setText(QCoreApplication::translate("Admin", "Room Type List", nullptr));
         label_23->setText(QCoreApplication::translate("Admin", "Total: ", nullptr));
         totalroom_6->setText(QCoreApplication::translate("Admin", "TextLabel", nullptr));
@@ -2854,16 +2701,16 @@ public:
 
         LineEditSearchRoomType->setPlaceholderText(QCoreApplication::translate("Admin", "Search here ...", nullptr));
         Refbtn_3->setText(QCoreApplication::translate("Admin", "Refresh", nullptr));
-        QTableWidgetItem *___qtablewidgetitem67 = RoomTypeTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem67->setText(QCoreApplication::translate("Admin", "RoomType ID", nullptr));
-        QTableWidgetItem *___qtablewidgetitem68 = RoomTypeTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem68->setText(QCoreApplication::translate("Admin", "RoomType Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem69 = RoomTypeTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem69->setText(QCoreApplication::translate("Admin", "RoomType Description", nullptr));
-        QTableWidgetItem *___qtablewidgetitem70 = RoomTypeTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem70->setText(QCoreApplication::translate("Admin", "Price (VND)", nullptr));
-        QTableWidgetItem *___qtablewidgetitem71 = RoomTypeTable->horizontalHeaderItem(4);
-        ___qtablewidgetitem71->setText(QCoreApplication::translate("Admin", "Action", nullptr));
+        QTableWidgetItem *___qtablewidgetitem59 = RoomTypeTable->horizontalHeaderItem(0);
+        ___qtablewidgetitem59->setText(QCoreApplication::translate("Admin", "RoomType ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem60 = RoomTypeTable->horizontalHeaderItem(1);
+        ___qtablewidgetitem60->setText(QCoreApplication::translate("Admin", "RoomType Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem61 = RoomTypeTable->horizontalHeaderItem(2);
+        ___qtablewidgetitem61->setText(QCoreApplication::translate("Admin", "RoomType Description", nullptr));
+        QTableWidgetItem *___qtablewidgetitem62 = RoomTypeTable->horizontalHeaderItem(3);
+        ___qtablewidgetitem62->setText(QCoreApplication::translate("Admin", "Price (VND)", nullptr));
+        QTableWidgetItem *___qtablewidgetitem63 = RoomTypeTable->horizontalHeaderItem(4);
+        ___qtablewidgetitem63->setText(QCoreApplication::translate("Admin", "Action", nullptr));
     } // retranslateUi
 
 };

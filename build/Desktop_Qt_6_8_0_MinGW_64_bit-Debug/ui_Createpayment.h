@@ -28,30 +28,25 @@ class Ui_Createpayment
 {
 public:
     QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout_4;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QComboBox *CBSP;
     QLabel *label_9;
-    QLineEdit *Year;
-    QSpacerItem *horizontalSpacer_2;
-    QPushButton *Enterbtn;
+    QLineEdit *LineEditSearchPayment;
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout_3;
-    QPushButton *Okbtn;
+    QPushButton *AddSerbtn;
     QPushButton *pushButton_2;
 
     void setupUi(QDialog *Createpayment)
     {
         if (Createpayment->objectName().isEmpty())
             Createpayment->setObjectName("Createpayment");
-        Createpayment->resize(421, 382);
+        Createpayment->resize(337, 331);
         verticalLayout = new QVBoxLayout(Createpayment);
         verticalLayout->setObjectName("verticalLayout");
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
         label = new QLabel(Createpayment);
@@ -82,44 +77,29 @@ public:
 
         horizontalLayout->addWidget(label_9);
 
-        Year = new QLineEdit(Createpayment);
-        Year->setObjectName("Year");
-        Year->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+        LineEditSearchPayment = new QLineEdit(Createpayment);
+        LineEditSearchPayment->setObjectName("LineEditSearchPayment");
+        LineEditSearchPayment->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "padding-left:20px;\n"
 "border: 1px solid gray;\n"
 "border-radius: 10px;\n"
 "}"));
 
-        horizontalLayout->addWidget(Year);
+        horizontalLayout->addWidget(LineEditSearchPayment);
 
 
-        horizontalLayout_4->addLayout(horizontalLayout);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_2);
-
-        Enterbtn = new QPushButton(Createpayment);
-        Enterbtn->setObjectName("Enterbtn");
-
-        horizontalLayout_4->addWidget(Enterbtn);
-
-
-        verticalLayout->addLayout(horizontalLayout_4);
+        verticalLayout->addLayout(horizontalLayout);
 
         tableWidget = new QTableWidget(Createpayment);
-        if (tableWidget->columnCount() < 4)
-            tableWidget->setColumnCount(4);
+        if (tableWidget->columnCount() < 3)
+            tableWidget->setColumnCount(3);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
-        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         tableWidget->setObjectName("tableWidget");
-        tableWidget->setEditTriggers(QAbstractItemView::EditTrigger::AnyKeyPressed|QAbstractItemView::EditTrigger::EditKeyPressed);
 
         verticalLayout->addWidget(tableWidget);
 
@@ -131,10 +111,10 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        Okbtn = new QPushButton(Createpayment);
-        Okbtn->setObjectName("Okbtn");
-        Okbtn->setMinimumSize(QSize(55, 18));
-        Okbtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        AddSerbtn = new QPushButton(Createpayment);
+        AddSerbtn->setObjectName("AddSerbtn");
+        AddSerbtn->setMinimumSize(QSize(55, 18));
+        AddSerbtn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "/background-color: #34D481;\n"
 "/color:white;\n"
 "/border:none;\n"
@@ -142,9 +122,9 @@ public:
 "/font-weight:bold;\n"
 "/font-size: 10px;\n"
 "}"));
-        Okbtn->setCheckable(true);
+        AddSerbtn->setCheckable(true);
 
-        horizontalLayout_3->addWidget(Okbtn);
+        horizontalLayout_3->addWidget(AddSerbtn);
 
         pushButton_2 = new QPushButton(Createpayment);
         pushButton_2->setObjectName("pushButton_2");
@@ -192,18 +172,15 @@ public:
         CBSP->setItemText(12, QCoreApplication::translate("Createpayment", "12", nullptr));
 
         label_9->setText(QCoreApplication::translate("Createpayment", "Year: ", nullptr));
-        Year->setText(QString());
-        Year->setPlaceholderText(QCoreApplication::translate("Createpayment", "Search here ...", nullptr));
-        Enterbtn->setText(QCoreApplication::translate("Createpayment", "Nh\341\272\255p", nullptr));
+        LineEditSearchPayment->setText(QString());
+        LineEditSearchPayment->setPlaceholderText(QCoreApplication::translate("Createpayment", "Search here ...", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QCoreApplication::translate("Createpayment", "Room ID", nullptr));
+        ___qtablewidgetitem->setText(QCoreApplication::translate("Createpayment", "New Column", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QCoreApplication::translate("Createpayment", "Tenant ID", nullptr));
+        ___qtablewidgetitem1->setText(QCoreApplication::translate("Createpayment", "Room ID", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("Createpayment", "\304\220i\341\273\207n", nullptr));
-        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QCoreApplication::translate("Createpayment", "N\306\260\341\273\233c", nullptr));
-        Okbtn->setText(QCoreApplication::translate("Createpayment", "Ok", nullptr));
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("Createpayment", "N\306\260\341\273\233c", nullptr));
+        AddSerbtn->setText(QCoreApplication::translate("Createpayment", "Ok", nullptr));
         pushButton_2->setText(QCoreApplication::translate("Createpayment", "Cancel", nullptr));
     } // retranslateUi
 
