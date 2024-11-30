@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="Room.txt">E:/GUI/Pbl/Room.txt</file>
+</qresource>
+</RCC>
